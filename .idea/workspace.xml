@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="" />
+    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/apiManager/stateProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/context/authContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modal/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-register.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbars/IndexNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/IndexNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index-sections/SectionJavaScript.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WKnM5XkzgTBlXrduMJrwAtq4rM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -19,7 +43,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../basic_api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -52,6 +77,18 @@
       <workItem from="1578978535340" duration="27490000" />
       <workItem from="1579044346867" duration="2263000" />
       <workItem from="1579049481592" duration="117000" />
+      <workItem from="1579049679236" duration="626000" />
+      <workItem from="1579085339112" duration="988000" />
+      <workItem from="1579170045429" duration="786000" />
+      <workItem from="1579235126029" duration="29702000" />
+      <workItem from="1579315237799" duration="15460000" />
+      <workItem from="1579345224923" duration="4791000" />
+      <workItem from="1579367202505" duration="4226000" />
+      <workItem from="1579405814151" duration="6493000" />
+      <workItem from="1579426627749" duration="8461000" />
+      <workItem from="1579445182090" duration="307000" />
+      <workItem from="1579466497995" duration="6769000" />
+      <workItem from="1579480560327" duration="6547000" />
     </task>
     <servers />
   </component>
@@ -59,13 +96,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1579466531680">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579466531680" />
     <state x="798" y="435" width="347" height="169" key="Github.CreateGistDialog" timestamp="1579048905689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="798" y="435" width="347" height="169" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579048905689" />
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579044495105">
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579466498147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579044495105" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579466498147" />
   </component>
 </project>

@@ -1,18 +1,19 @@
 
 import React from "react";
-
+import SignUpModal from "components/Modal/SignUpModal.js";
 // reactstrap components
 import {
     Container,
     Input,
     InputGroupAddon,
     InputGroupText,
-    InputGroup, FormGroup, Col, Button,
+    InputGroup, FormGroup, Col, Button, Modal, Row, Card, Form,
 } from "reactstrap";
 
 
 
 function IndexHeader() {
+
   return (
     <>
       <div
@@ -40,16 +41,14 @@ function IndexHeader() {
             <h2 className="presentation-subtitle text-center">
               Here for you to commemorate deceased a online worship system
             </h2>
-              <div className='row'>
-              <div className='col-sm-12 col-lg-2'>
-                <Button color="primary" block outline type="button" className="mr-1">
-                  Regular
+              <div className='row' style={{marginTop: '4em'}}>
+              <div className='offset-lg-1 col-sm-12 col-lg-3'>
+                <Button color="primary" block outline type="button" className="mr-1" size="lg">
+                  Tutorial
                 </Button>
               </div>
-              <div className="offset-lg-8 col-sm-12 col-lg-2">
-                <Button color="primary" block outline type="button" className="mr-1">
-                  Regular
-                </Button>
+              <div className="offset-lg-4 col-sm-12 col-lg-3">
+                  <SignUpModal />
               </div>
               </div>
           </Container>
@@ -62,6 +61,7 @@ function IndexHeader() {
         />
 
       </div>
+
     </>
   );
 }
