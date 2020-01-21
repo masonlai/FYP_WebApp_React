@@ -47,7 +47,7 @@ function IndexNavbar() {
             <Container>
                 <div className="navbar-translate">
                     <NavbarBrand
-                        style={{fontSize: '30px', border: 'ridge', padding: '5px'}}
+                        style={{fontSize: '30px', border: 'ridge', padding: '5px', marginLeft:'15px'}}
                         data-placement="bottom"
                         href="/index"
                         target="_blank"
@@ -66,6 +66,7 @@ function IndexNavbar() {
                         <span className="navbar-toggler-bar bar1"/>
                         <span className="navbar-toggler-bar bar2"/>
                         <span className="navbar-toggler-bar bar3"/>
+
                     </button>
                 </div>
                 <Collapse
@@ -81,10 +82,12 @@ function IndexNavbar() {
                                 title="Home page"
                             >
                                 <i className="fa fa-home"/>
+                                <p className="d-lg-none"><Link to="/index" style={{'color': '#403D39','fontWeight': '600'}}>home</Link></p>
                                 <Link to="/index" style={location.pathname != '/index' ? {
                                     color: '#403D39',
                                     'font-weight': '600'
                                 } : {color: '#FFFFFF', 'font-weight': '600'}}>Home</Link>
+
                             </NavLink>
                         </NavItem>
                         <NavItem>
@@ -94,36 +97,18 @@ function IndexNavbar() {
                                 title="Know more about us"
                             >
                                 <i className="fa fa-users"/>
+                                <p className="d-lg-none"><Link to="/index"
+                                                               style={{'color': '#403D39', 'fontWeight': '600'}}>About us</Link></p>
                                 <Link to="/about" style={location.pathname != '/index' ? {
                                     color: '#403D39',
                                     'font-weight': '600'
                                 } : {color: '#FFFFFF', 'font-weight': '600'}}>About us</Link>
-                                <p className="d-lg-none">About us</p>
+
                             </NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink
-                                data-placement="bottom"
-                                href=""
-                                target="_blank"
-                                title="Talk to us!"
-                            >
-                                <i className="fa fa-comments"/>
-                                <Link to="/contact" style={location.pathname != '/index' ? {
-                                    color: '#403D39',
-                                    'font-weight': '600'
-                                } : {color: '#FFFFFF', 'font-weight': '600'}}>Contact</Link>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink
-                                data-placement="bottom"
-                                target="_blank"
-                            >
-                                <i className="fa fa-sign-in"/>
-                                <LoginModal/>
-                            </NavLink>
-                        </NavItem>
+
+                            <LoginModal/>
+
 
                     </Nav>
                 </Collapse>

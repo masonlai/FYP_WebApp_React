@@ -42,9 +42,11 @@
 .modal-dialog {
     padding-top: 60px;
 }
-.modal-body{
-    padding: 20px 50px;
-    color: #000;
+@media only screen and (min-width: 768px) {
+    .modal-body {
+        padding: 20px 50px;
+        color: #000;
+    }
 }
 .modal-footer {
     border-top: 1px solid $medium-gray;

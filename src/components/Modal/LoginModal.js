@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import {AuthContext} from '../../views/Index'
 import {Login} from '../../assets/apiManager/apiManager'
 
+
 import {
     Button,
     InputGroupAddon,
@@ -12,9 +13,11 @@ import {
     Row,
     Col,
     Spinner,
-    Input
+    Input,
+    NavItem,
+    NavLink, Nav, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem
 } from "reactstrap";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 function LoginModal(props) {
 
@@ -24,7 +27,9 @@ function LoginModal(props) {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const {toggleAuth} = useContext(AuthContext)
+    const [dropdownOpen, setOpen] = useState(false);
 
+    const toggle = () => setOpen(!dropdownOpen);
     const toggleModal = () => {
         setModal(!modal);
     };
@@ -48,7 +53,7 @@ function LoginModal(props) {
         });
     }
 
-    const logoutHandler = () =>{
+    const logoutHandler = () => {
         toggleAuth('')
         setModal(!modal);
     }
@@ -62,21 +67,51 @@ function LoginModal(props) {
         setPassword(value);
     };
     const auth = useContext(AuthContext)
+
     return (
         <>
-            {auth.AuthData.username?
-            <button onClick={logoutHandler} style={{backgroundColor: 'transparent', border: 'transparent'}}>
-                <p style={location.pathname != '/index' ? {color: '#403D39', 'font-weight': '600'} : {
-                    color: '#FFFFFF',
-                    'font-weight': '600'
-                }}>{auth.AuthData.username} Log Out</p>
-            </button>:
-            <button onClick={toggleModal} style={{backgroundColor: 'transparent', border: 'transparent'}}>
-                <p style={location.pathname != '/index' ? {color: '#403D39', 'font-weight': '600'} : {
-                    color: '#FFFFFF',
-                    'font-weight': '600'
-                }}>Sign In</p>
-            </button>}
+            {auth.AuthData.username ?
+                <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}
+                                style={{backgroundColor: 'transparent', border: 'transparent'}}>
+                    <DropdownToggle caret style={{backgroundColor: 'transparent', border: 'transparent'}}>
+                        <a style={location.pathname != '/index' ? {
+                            color: '#403D39',
+                            'font-weight': '600'
+                        } : {color: '#FFFFFF', 'font-weight': '600'}}><i
+                            className="fa fa-user" style={location.pathname != '/index' ? {
+                            color: '#403D39',
+                            'font-weight': '600'
+                        } : {color: '#FFFFFF', 'font-weight': '600'}}/>
+                            <p className="d-lg-none"> {auth.AuthData.username}</p>
+                            {auth.AuthData.username}</a>
+                    </DropdownToggle>
+                    <DropdownMenu>
+
+                        <Link to="/craeting_webpage"><DropdownItem>Create a webpage</DropdownItem></Link>
+                        <DropdownItem>Edit webpages</DropdownItem>
+                        <DropdownItem onClick={logoutHandler}>Logout</DropdownItem>
+                    </DropdownMenu>
+                </ButtonDropdown>
+
+
+                : <NavItem>
+                    <NavLink
+                        data-placement="bottom"
+                        target="_blank"
+                    > <i className="fa fa-sign-in"/>
+                        <p href='#' onClick={toggleModal} className="d-lg-none"
+                           style={{'color': '#403D39', 'fontWeight': '600'}}>Sign In</p>
+
+                        <a href='#' onClick={toggleModal}
+                           style={location.pathname != '/index' ? {color: '#403D39', 'font-weight': '600'} : {
+                               color: '#FFFFFF',
+                               'font-weight': '600'
+                           }}>
+                            Sign In</a>
+
+                    </NavLink>
+                </NavItem>
+            }
             {/* Modal */}
             <Modal isOpen={modal} toggle={toggleModal}>
                 <div className="modal-header card-register" style={{borderRadius: '8px 8px 0 0'}}>
@@ -129,7 +164,6 @@ function LoginModal(props) {
                                         </div>
                                     </InputGroup>
 
-
                                     <Button
                                         block
                                         className="btn-round"
@@ -145,9 +179,9 @@ function LoginModal(props) {
                                         className="btn-link"
                                         color="primary"
                                         href="#pablo"
-                                        onClick={e => e.preventDefault()}
+                                        onClick={toggleModal}
                                     >
-                                        No account? Register now!
+                                        No account? Click the Register now!
                                     </Button>
                                 </div>
                             </Col>

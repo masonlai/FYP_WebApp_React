@@ -112,7 +112,7 @@ paper-kit-react
     │       └── paper-kit.scss
     ├── components
     │   ├── Footers
-    │   │   └── DemoFooter.js
+    │   │   └── Footer.js
     │   ├── Headers
     │   │   ├── IndexHeader.js
     │   │   ├── LandingPageHeader.js

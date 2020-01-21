@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/apiManager/stateProvider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/context/authContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footers/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/examples/CreatePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/note.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-register.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_navbars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_navbars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footers/DemoFooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbars/IndexNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/IndexNavbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/examples/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index-sections/SectionJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/RegisterPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +45,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../basic_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -88,14 +90,34 @@
       <workItem from="1579426627749" duration="8461000" />
       <workItem from="1579445182090" duration="307000" />
       <workItem from="1579466497995" duration="6769000" />
-      <workItem from="1579480560327" duration="6547000" />
+      <workItem from="1579480560327" duration="6813000" />
+      <workItem from="1579502122220" duration="2064000" />
+      <workItem from="1579520225136" duration="6334000" />
+      <workItem from="1579555208190" duration="6255000" />
+      <workItem from="1579588474108" duration="19118000" />
     </task>
+    <task id="LOCAL-00001" summary="login success">
+      <created>1579487549544</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579487549544</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login success" />
+    <option name="LAST_COMMIT_MESSAGE" value="login success" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1579487548282">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579487548282" />
     <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1579466531680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -104,9 +126,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="798" y="435" width="347" height="169" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579048905689" />
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579466498147">
+    <state x="463" y="166" key="SettingsEditor" timestamp="1579559550561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579466498147" />
+    <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579559550561" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1579487577429">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579487577429" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579588647348">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579588647348" />
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579487562844">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579487562844" />
+    <state x="1000" y="174" width="807" height="732" key="find.popup" timestamp="1579625848367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1000" y="174" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579625848367" />
   </component>
 </project>

@@ -6,7 +6,7 @@ import React, {useEffect, createContext, useContext, useState} from "react";
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import DemoFooter from "components/Footers/Footer.js";
 
 // index sections
 import SectionButtons from "views/index-sections/SectionButtons.js";
@@ -22,7 +22,7 @@ import SectionNotifications from "views/index-sections/SectionNotifications.js";
 import SectionNucleoIcons from "views/index-sections/SectionNucleoIcons.js";
 import SectionProgress from "views/index-sections/SectionProgress.js";
 import SectionTypography from "views/index-sections/SectionTypography.js";
-
+import CreatePage from "../views/examples/CreatePage";
 
 import {
   BrowserRouter as Router,
@@ -45,6 +45,7 @@ function Index() {
   const toggleAuth= (info) =>{
     setAuthData(info)
   }
+
   return (
     <AuthContext.Provider value={{AuthData, toggleAuth: toggleAuth}}>
       <Router>
@@ -55,6 +56,9 @@ function Index() {
             <IndexHeader />
           </Route>
           <Route path="/about">
+            <CreatePage />
+          </Route>
+          <Route path="/craeting_webpage">
             <SectionButtons />
             <SectionCarousel/>
             <SectionDark/>
