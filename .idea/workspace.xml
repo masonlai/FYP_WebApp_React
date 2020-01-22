@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
+    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="gitignore fucking node_modules">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/documentation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/documentation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ISSUE_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +87,7 @@
       <workItem from="1579520225136" duration="6334000" />
       <workItem from="1579555208190" duration="6255000" />
       <workItem from="1579588474108" duration="20829000" />
-      <workItem from="1579688948105" duration="16835000" />
+      <workItem from="1579688948105" duration="17803000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -136,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579710068196</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gitignore fucking node_modules">
+      <created>1579711735904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579711735905</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,17 +150,18 @@
     <MESSAGE value="login success" />
     <MESSAGE value="poccess v1 for creating page" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="gitignore fucking node_modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore fucking node_modules" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579708954464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579708954464" />
-    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1579710067110">
+    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1579712075774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579710067110" />
+    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579712075774" />
     <state x="184" y="92" key="DiffContextDialog" timestamp="1579709542593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -175,14 +178,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="534" y="342" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579710509245" />
+    <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1579711768206">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579711768206" />
     <state x="463" y="166" key="SettingsEditor" timestamp="1579559550561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579559550561" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1579710074143">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1579712081964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579710074143" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579712081964" />
     <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579588647348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
