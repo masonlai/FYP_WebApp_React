@@ -1,4 +1,3 @@
-
 import React, {useEffect, createContext, useContext, useState} from "react";
 
 // reactstrap components
@@ -25,60 +24,73 @@ import SectionTypography from "views/index-sections/SectionTypography.js";
 import CreatePage from "../views/examples/CreatePage";
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
 } from "react-router-dom";
 
 export const AuthContext = createContext();
+export const BackgroundContext = createContext();
 
 function Index() {
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("index");
-    return function cleanup() {
-      document.body.classList.remove("index");
-    };
-  });
-  const [AuthData,setAuthData]=useState('');
-  const toggleAuth= (info) =>{
-    setAuthData(info)
-  }
-
-  return (
-    <AuthContext.Provider value={{AuthData, toggleAuth: toggleAuth}}>
-      <Router>
-      <IndexNavbar />
-      <div className="main">
-        <Switch>
-          <Route exact path="/index">
-            <IndexHeader />
-          </Route>
-          <Route path="/about">
-            <CreatePage />
-          </Route>
-          <Route path="/craeting_webpage">
-            <SectionButtons />
-            <SectionCarousel/>
-            <SectionDark/>
-            <SectionDownload/>
-            <SectionExamples/>
-            <SectionJavaScript/>
-            <SectionLogin/>
-            <SectionNavbars/>
-            <SectionNavigation/>
-            <SectionNotifications/>
-            <SectionNucleoIcons/>
-            <SectionProgress/>
-            <SectionTypography/>
-          </Route>
-        </Switch>
-        <DemoFooter/>
-      </div>
-      </Router>
-    </AuthContext.Provider>
-  );
+    document.documentElement.classList.remove("nav-open");
+    React.useEffect(() => {
+        document.body.classList.add("index");
+        return function cleanup() {
+            document.body.classList.remove("index");
+        };
+    });
+    const [AuthData, setAuthData] = useState('');
+    const toggleAuth = (info) => {
+        setAuthData(info)
+    }
+    const [Background, setBackground] = useState({
+        backgroundRepeat: 'repeat',
+        backgroundImage:
+            "url(" + require("assets/img/full-bloom.png") + ")",
+        minHeight: '100vh',
+        maxHeight: '999px',
+        overflow: 'hidden',
+        position: 'relative',
+        width: '100%',
+    });
+    return (
+        <AuthContext.Provider value={{AuthData, toggleAuth: toggleAuth}}>
+            <BackgroundContext.Provider value={Background}>
+                <Router>
+                    <IndexNavbar/>
+                    <div className="main">
+                        <Switch>
+                            <Route exact path="/index1">
+                                <CreatePage/>
+                                <IndexHeader/>
+                            </Route>
+                            <Route path="/about">
+                                <CreatePage/>
+                            </Route>
+                            <Route path="/craeting_webpage">
+                                <SectionButtons/>
+                                <SectionCarousel/>
+                                <SectionDark/>
+                                <SectionDownload/>
+                                <SectionExamples/>
+                                <SectionJavaScript/>
+                                <SectionLogin/>
+                                <SectionNavbars/>
+                                <SectionNavigation/>
+                                <SectionNotifications/>
+                                <SectionNucleoIcons/>
+                                <SectionProgress/>
+                                <SectionTypography/>
+                            </Route>
+                        </Switch>
+                        <DemoFooter/>
+                    </div>
+                </Router>
+            </BackgroundContext.Provider>
+        </AuthContext.Provider>
+    );
 }
 
 export default Index;

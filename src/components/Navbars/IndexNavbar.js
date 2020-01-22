@@ -47,7 +47,7 @@ function IndexNavbar() {
             <Container>
                 <div className="navbar-translate">
                     <NavbarBrand
-                        style={{fontSize: '30px', border: 'ridge', padding: '5px', marginLeft:'15px'}}
+                        style={{fontSize: '30px', border: 'ridge', padding: '5px', marginLeft: '15px'}}
                         data-placement="bottom"
                         href="/index"
                         target="_blank"
@@ -82,7 +82,11 @@ function IndexNavbar() {
                                 title="Home page"
                             >
                                 <i className="fa fa-home"/>
-                                <p className="d-lg-none"><Link to="/index" style={{'color': '#403D39','fontWeight': '600'}}>home</Link></p>
+                                <p className="d-lg-none"><Link to="/index"
+                                                               style={{
+                                                                   'color': '#403D39',
+                                                                   'fontWeight': '600'
+                                                               }}>home</Link></p>
                                 <Link to="/index" style={location.pathname != '/index' ? {
                                     color: '#403D39',
                                     'font-weight': '600'
@@ -98,7 +102,8 @@ function IndexNavbar() {
                             >
                                 <i className="fa fa-users"/>
                                 <p className="d-lg-none"><Link to="/index"
-                                                               style={{'color': '#403D39', 'fontWeight': '600'}}>About us</Link></p>
+                                                               style={{'color': '#403D39', 'fontWeight': '600'}}>About
+                                    us</Link></p>
                                 <Link to="/about" style={location.pathname != '/index' ? {
                                     color: '#403D39',
                                     'font-weight': '600'
@@ -106,10 +111,7 @@ function IndexNavbar() {
 
                             </NavLink>
                         </NavItem>
-
-                            <LoginModal/>
-
-
+                        <LoginModal/>
                     </Nav>
                 </Collapse>
             </Container>
