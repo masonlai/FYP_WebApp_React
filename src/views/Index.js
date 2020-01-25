@@ -44,13 +44,11 @@ function Index() {
     const [AuthData, setAuthData] = useState('');
     const toggleAuth = (info) => {
         setAuthData(info)
-    }
+    };
     const [Background, setBackground] = useState({
         backgroundRepeat: 'repeat',
         backgroundImage:
             "url(" + require("assets/img/full-bloom.png") + ")",
-        minHeight: '100vh',
-        maxHeight: '999px',
         overflow: 'hidden',
         position: 'relative',
         width: '100%',
@@ -64,10 +62,21 @@ function Index() {
                         <Switch>
                             <Route exact path="/index1">
                                 <CreatePage/>
-                                <IndexHeader/>
                             </Route>
                             <Route path="/about">
-                                <CreatePage/>
+                                <SectionButtons/>
+                                <SectionCarousel/>
+                                <SectionDark/>
+                                <SectionDownload/>
+                                <SectionExamples/>
+                                <SectionJavaScript/>
+                                <SectionLogin/>
+                                <SectionNavbars/>
+                                <SectionNavigation/>
+                                <SectionNotifications/>
+                                <SectionNucleoIcons/>
+                                <SectionProgress/>
+                                <SectionTypography/>
                             </Route>
                             <Route path="/craeting_webpage">
                                 <SectionButtons/>

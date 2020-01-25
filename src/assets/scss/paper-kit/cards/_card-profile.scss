@@ -13,6 +13,7 @@
     .card-title {
       margin-top: 5px !important;
     }
+
     .card-category {
       margin-bottom: 5px;
       margin-top: 5px;
@@ -27,10 +28,11 @@
     overflow: hidden;
 
     &.border-white {
-        border: 4px solid $white-color;
+      border: 4px solid $white-color;
     }
+
     &.border-gray {
-        border: 4px solid $card-muted-color;
+      border: 4px solid $card-muted-color;
     }
   }
 
@@ -41,3 +43,51 @@
     margin-top: 100px;
   }
 }
+
+.createForm {
+  font-size: $font-size-large;
+  font-weight: bold;
+}
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.leftTheme{background-image:url('../img/left.png');}
+.centerTheme{background-image:url('../img/center.png');}
+.rightTheme{background-image:url('../img/right.png');}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.5) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.5) grayscale(1) opacity(.7);
+            filter: brightness(1.5) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+.selectTheme{
+  background-color: #E6E6FA;
+}
+
+/* Extras */
+a:visited{color:#444}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
