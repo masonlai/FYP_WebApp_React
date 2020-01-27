@@ -21,7 +21,10 @@ import SectionNotifications from "views/index-sections/SectionNotifications.js";
 import SectionNucleoIcons from "views/index-sections/SectionNucleoIcons.js";
 import SectionProgress from "views/index-sections/SectionProgress.js";
 import SectionTypography from "views/index-sections/SectionTypography.js";
-import CreatePage from "../views/examples/CreatePage";
+
+import Step1 from "../components/Form/step1";
+import Step2 from "../components/Form/step2";
+
 
 import {
     BrowserRouter as Router,
@@ -60,8 +63,8 @@ function Index() {
                     <IndexNavbar/>
                     <div className="main">
                         <Switch>
-                            <Route exact path="/index1">
-                                <CreatePage/>
+                            <Route exact path="/index">
+                                <IndexHeader/>
                             </Route>
                             <Route path="/about">
                                 <SectionButtons/>
@@ -78,21 +81,9 @@ function Index() {
                                 <SectionProgress/>
                                 <SectionTypography/>
                             </Route>
-                            <Route path="/craeting_webpage">
-                                <SectionButtons/>
-                                <SectionCarousel/>
-                                <SectionDark/>
-                                <SectionDownload/>
-                                <SectionExamples/>
-                                <SectionJavaScript/>
-                                <SectionLogin/>
-                                <SectionNavbars/>
-                                <SectionNavigation/>
-                                <SectionNotifications/>
-                                <SectionNucleoIcons/>
-                                <SectionProgress/>
-                                <SectionTypography/>
+                            <Route path="/craetePage" component={Step1}>
                             </Route>
+                            <Route path="/createPage/step2" component={Step2}/>
                         </Switch>
                         <DemoFooter/>
                     </div>

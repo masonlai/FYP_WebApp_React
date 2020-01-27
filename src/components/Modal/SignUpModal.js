@@ -19,7 +19,7 @@ import {Link} from "react-router-dom";
 
 function SignUpModal({fromLogin = false}) {
     const [modal, setModal] = React.useState(false);
-    const auth = useContext(AuthContext)
+    const auth = useContext(AuthContext);
     const toggleModal = () => {
         setModal(!modal);
     };
@@ -32,24 +32,24 @@ function SignUpModal({fromLogin = false}) {
     const [email, setEmail] = useState('');
     const [religion, setReligion] = useState('');
     const [error, setError] = useState('');
-    const {toggleAuth} = useContext(AuthContext)
+    const {toggleAuth} = useContext(AuthContext);
     const mySubmitHandler = (data) => {
         data.preventDefault();
-        setLoading(true)
+        setLoading(true);
         Signup(username, password, email, religion).then(function (value) {
-            toggleAuth(value)
+            toggleAuth(value);
             if (value.access_token) {
-                setError('')
-                console.log(value)
+                setError('');
+                console.log(value);
                 setLoading(false)
             } else {
-                setLoading(false)
+                setLoading(false);
                 setError(value.message)
 
             }
 
         });
-    }
+    };
     const handleChange_username = (e) => {
         const {value} = e.target;
         setUsername(value);
@@ -148,7 +148,7 @@ function SignUpModal({fromLogin = false}) {
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input placeholder="Username" type="text" value={username}
-                                                       onChange={handleChange_username}/>
+                                                       onChange={handleChange_username} required/>
                                             </InputGroup>
                                             <label>Password</label>
                                             <InputGroup className="form-group-no-border">
@@ -158,7 +158,7 @@ function SignUpModal({fromLogin = false}) {
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input placeholder="Password" type="password" value={password}
-                                                       onChange={handleChange_password}/>
+                                                       onChange={handleChange_password} required/>
                                             </InputGroup>
                                             <label>Email</label>
                                             <InputGroup className="form-group-no-border">
@@ -168,7 +168,7 @@ function SignUpModal({fromLogin = false}) {
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input placeholder="Email" type="email" value={email}
-                                                       onChange={handleChange_email}/>
+                                                       onChange={handleChange_email} required/>
                                             </InputGroup>
 
 
@@ -182,7 +182,7 @@ function SignUpModal({fromLogin = false}) {
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input type="select" name="select" id="exampleSelect" value={religion}
-                                                       onChange={handleChange_religion}>
+                                                       onChange={handleChange_religion} required>
                                                     <option>Christianity</option>
                                                     <option>Buddhism</option>
                                                     <option>Other</option>
@@ -218,6 +218,6 @@ function SignUpModal({fromLogin = false}) {
             </Modal>
         </>
     )
-};
+}
 
 export default SignUpModal;

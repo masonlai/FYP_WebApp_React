@@ -26,7 +26,7 @@ function LoginModal(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const {toggleAuth} = useContext(AuthContext)
+    const {toggleAuth} = useContext(AuthContext);
     const [dropdownOpen, setOpen] = useState(false);
 
     const toggle = () => setOpen(!dropdownOpen);
@@ -37,26 +37,26 @@ function LoginModal(props) {
     const location = useLocation();
     const mySubmitHandler = (data) => {
         data.preventDefault();
-        setLoading(true)
+        setLoading(true);
         Login(username, password).then(function (value) {
-            toggleAuth(value)
+            toggleAuth(value);
             if (value.access_token) {
                 setModal(!modal);
-                setError('')
+                setError('');
                 setLoading(false)
             } else {
-                setLoading(false)
+                setLoading(false);
                 setError(value.message)
 
             }
 
         });
-    }
+    };
 
     const logoutHandler = () => {
-        toggleAuth('')
+        toggleAuth('');
         setModal(!modal);
-    }
+    };
 
     const handleChange_username = (e) => {
         const {value} = e.target;
@@ -66,7 +66,7 @@ function LoginModal(props) {
         const {value} = e.target;
         setPassword(value);
     };
-    const auth = useContext(AuthContext)
+    const auth = useContext(AuthContext);
 
     return (
         <>
@@ -147,7 +147,7 @@ function LoginModal(props) {
                                             </InputGroupText>
                                         </InputGroupAddon>
                                         <Input placeholder="Username" type="text" value={username}
-                                               onChange={handleChange_username}/>
+                                               onChange={handleChange_username} required/>
                                     </InputGroup>
                                     <label>Password</label>
                                     <InputGroup
@@ -158,7 +158,7 @@ function LoginModal(props) {
                                             </InputGroupText>
                                         </InputGroupAddon>
                                         <Input placeholder="Password" type="password" value={password}
-                                               onChange={handleChange_password}/>
+                                               onChange={handleChange_password} required/>
                                         <div className="form-control-feedback">
                                             {error ? error : ""}
                                         </div>
@@ -191,7 +191,7 @@ function LoginModal(props) {
             </Modal>
         </>
     )
-};
+}
 
 
 export default LoginModal;

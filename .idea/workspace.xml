@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="node_modules">
-      <change afterPath="$PROJECT_DIR$/src/components/Form/StepOne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/step1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/step2.js" afterDir="false" />
+    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_navbars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_navbars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/login.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-profile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/HooksCropperModal/HooksCropperModal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/HooksCropperModal/HooksCropperModal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/StepOne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/step1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/step2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/step2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/examples/CreatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/CreatePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/CreatePage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index-sections/SectionButtons.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../copper-learn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fyp_backendAPI" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -113,6 +115,14 @@
       <workItem from="1579836693680" duration="3757000" />
       <workItem from="1579874730902" duration="6719000" />
       <workItem from="1579883221168" duration="8479000" />
+      <workItem from="1579920807508" duration="14694000" />
+      <workItem from="1579936790338" duration="7428000" />
+      <workItem from="1579962224663" duration="296000" />
+      <workItem from="1579963805596" duration="2744000" />
+      <workItem from="1579968501329" duration="42000" />
+      <workItem from="1580012660829" duration="6100000" />
+      <workItem from="1580024843961" duration="15933000" />
+      <workItem from="1580095480732" duration="7510000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -170,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579712650568</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="first form">
+      <created>1579920964038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579920964038</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,33 +201,34 @@
     <MESSAGE value="gitignore" />
     <MESSAGE value="gitignore fucking node_modules" />
     <MESSAGE value="node_modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="node_modules" />
+    <MESSAGE value="first form" />
+    <option name="LAST_COMMIT_MESSAGE" value="first form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579920912929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579920912929" />
-    <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579892032731">
+    <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579922254767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1579892032731" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579708954464">
+    <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1579922254767" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579945704422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579708954464" />
-    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1579712829309">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579945704422" />
+    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1579920962142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579712829309" />
+    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579920962142" />
     <state x="184" y="92" key="DiffContextDialog" timestamp="1579712688136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="92" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579712688136" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1579891643563">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1580095981265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579891643563" />
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580095981265" />
     <state x="798" y="435" width="347" height="169" key="Github.CreateGistDialog" timestamp="1579048905689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -223,18 +241,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579711768206" />
-    <state x="463" y="166" key="SettingsEditor" timestamp="1579559550561">
+    <state x="463" y="166" key="SettingsEditor" timestamp="1579945502128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579559550561" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1579712081964">
+    <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579945502128" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1579920971854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579712081964" />
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579883260253">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579920971854" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1580095479866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579883260253" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580095479866" />
     <state x="730" y="261" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1579712695319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -243,10 +261,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579487562844" />
-    <state x="716" y="125" width="807" height="732" key="find.popup" timestamp="1579837738775">
+    <state x="716" y="125" width="807" height="732" key="find.popup" timestamp="1579946973105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="716" y="125" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579837738775" />
+    <state x="716" y="125" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579946973105" />
     <state x="704" y="324" key="git4idea.merge.GitMergeDialog" timestamp="1579709519051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

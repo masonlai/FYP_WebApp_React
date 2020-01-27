@@ -1,6 +1,9 @@
 
 import React from "react";
 import SignUpModal from "components/Modal/SignUpModal.js";
+import {
+    Link,
+} from "react-router-dom";
 // reactstrap components
 import {
     Container,
@@ -43,9 +46,10 @@ function IndexHeader() {
             </h2>
               <div className='row' style={{marginTop: '4em'}}>
               <div className='offset-lg-1 col-sm-12 col-lg-3'>
+                 <Link to='/craetePage'>
                 <Button color="primary" block outline type="button" className="mr-1" size="lg">
                   Tutorial
-                </Button>
+                </Button></Link>
               </div>
               <div className="offset-lg-4 col-sm-12 col-lg-3">
                   <SignUpModal />

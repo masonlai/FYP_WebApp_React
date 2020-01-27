@@ -48,7 +48,9 @@
   font-size: $font-size-large;
   font-weight: bold;
 }
-
+.cc-selector{
+  padding-top: 5px;
+}
 .cc-selector input{
     margin:0;padding:0;
     -webkit-appearance:none;
@@ -58,6 +60,10 @@
 .leftTheme{background-image:url('../img/left.png');}
 .centerTheme{background-image:url('../img/center.png');}
 .rightTheme{background-image:url('../img/right.png');}
+.Theme1{background-image:url('../img/antoine-barres.jpg');}
+.Theme2{background-image:url('../img/dasdas.jpg');}
+.Theme3{background-image:url('../img/header.jpg');}
+.Theme4{background-image:url('../img/daniel-olahh.jpg');}
 
 .cc-selector input:active +.drinkcard-cc{opacity: .9;}
 .cc-selector input:checked +.drinkcard-cc{
@@ -70,7 +76,7 @@
     background-size:contain;
     background-repeat:no-repeat;
     display:inline-block;
-    width:100px;height:70px;
+    min-width:20vh;min-height:17vh;
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
@@ -86,7 +92,6 @@
 .selectTheme{
   background-color: #E6E6FA;
 }
-
 /* Extras */
 a:visited{color:#444}
 a{color:#444;text-decoration:none;}
