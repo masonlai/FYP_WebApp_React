@@ -87,7 +87,7 @@ function LoginModal(props) {
                     </DropdownToggle>
                     <DropdownMenu>
 
-                        <Link to="/craeting_webpage"><DropdownItem>Create a webpage</DropdownItem></Link>
+                        <Link to="/craetePage"><DropdownItem>Create a webpage</DropdownItem></Link>
                         <DropdownItem>Edit webpages</DropdownItem>
                         <DropdownItem onClick={logoutHandler}>Logout</DropdownItem>
                     </DropdownMenu>

@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/pageIndex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Form/UploadTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Modal/CropperThemeModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PageIndex/PageIndex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/index-sections/PageIndex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-profile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/StepOne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_pagination.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/step1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form/step2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/step2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/examples/CreatePage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index-sections/SectionButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionTypography.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,20 +52,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fyp_backendAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/PageIndex" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\components\Form" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\components\PageIndex" />
+      <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\components\Modal" />
       <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\components\Form" />
       <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\assets\scss\paper-kit\cards" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\components\Modal" />
+      <recent name="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\src\components\Form" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -122,7 +127,18 @@
       <workItem from="1579968501329" duration="42000" />
       <workItem from="1580012660829" duration="6100000" />
       <workItem from="1580024843961" duration="15933000" />
-      <workItem from="1580095480732" duration="7510000" />
+      <workItem from="1580095480732" duration="12413000" />
+      <workItem from="1580122075342" duration="228000" />
+      <workItem from="1580122349311" duration="30000" />
+      <workItem from="1580125614698" duration="8035000" />
+      <workItem from="1580136074166" duration="845000" />
+      <workItem from="1580180290481" duration="3303000" />
+      <workItem from="1580194453102" duration="5597000" />
+      <workItem from="1580272119148" duration="704000" />
+      <workItem from="1580312299806" duration="2249000" />
+      <workItem from="1580350369619" duration="14438000" />
+      <workItem from="1580381564850" duration="19358000" />
+      <workItem from="1580443787501" duration="19365000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -187,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579920964038</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixing the image(base64) problem">
+      <created>1580103246965</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580103246965</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +225,8 @@
     <MESSAGE value="gitignore fucking node_modules" />
     <MESSAGE value="node_modules" />
     <MESSAGE value="first form" />
-    <option name="LAST_COMMIT_MESSAGE" value="first form" />
+    <MESSAGE value="fixing the image(base64) problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing the image(base64) problem" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579920912929">
@@ -217,18 +241,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579945704422" />
-    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1579920962142">
+    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1580103245144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579920962142" />
-    <state x="184" y="92" key="DiffContextDialog" timestamp="1579712688136">
+    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580103245144" />
+    <state x="184" y="92" width="1536" height="858" key="DiffContextDialog" timestamp="1580455398262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="92" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579712688136" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1580095981265">
+    <state x="184" y="92" width="1536" height="858" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580455398262" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1580453735576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580095981265" />
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580453735576" />
     <state x="798" y="435" width="347" height="169" key="Github.CreateGistDialog" timestamp="1579048905689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,18 +265,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579711768206" />
+    <state x="721" y="235" key="RollbackChangesDialog" timestamp="1580455299933">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="235" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580455299933" />
     <state x="463" y="166" key="SettingsEditor" timestamp="1579945502128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579945502128" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1579920971854">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1580103251915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579920971854" />
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1580095479866">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580103251915" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1580455498418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580095479866" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580455498418" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580471548074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580471548074" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1580381665312">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580381665312" />
     <state x="730" y="261" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1579712695319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -261,13 +297,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579487562844" />
-    <state x="716" y="125" width="807" height="732" key="find.popup" timestamp="1579946973105">
+    <state x="891" y="126" width="807" height="732" key="find.popup" timestamp="1580446522524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="716" y="125" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579946973105" />
+    <state x="891" y="126" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580446522524" />
     <state x="704" y="324" key="git4idea.merge.GitMergeDialog" timestamp="1579709519051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="704" y="324" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579709519051" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580182626493">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580182626493" />
   </component>
 </project>

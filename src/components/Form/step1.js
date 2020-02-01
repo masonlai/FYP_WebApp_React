@@ -8,7 +8,7 @@ import {
     Label,
     FormGroup,
     InputGroup,
-    InputGroupAddon, InputGroupText
+    InputGroupAddon, InputGroupText, Alert, Col
 } from "reactstrap";
 import UploadImg from '../../components/Form/UploadImg'
 import ReactDatetime from "react-datetime";
@@ -20,41 +20,40 @@ function Step1(props) {
     const [dateOfDeath, setDateOfDeath] = useState('');
     const [fistName, setFistName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [gender, setGender] = useState('');
+    const [gender, setGender] = useState('Male');
     const [nationality, setNationality] = useState('');
     const [placeOfBirth, setPlaceOfBirth] = useState('');
     const [imageUrl, setImageUrl] = useState('');
-    const [lifeProfile, setLifeProfile] = useState();
+    const [lifeProfile, setLifeProfile] = useState('');
+    const [error, setError] = useState(false);
 
     const callback = (hooksResultImgUrl) => {
         setImageUrl(hooksResultImgUrl)
     };
-    const handleSubmit = () => {
+    const handleSubmit = (data) => {
+        if (imageUrl == '') {
+            data.preventDefault();
+            setError(true)
+        } else {
+            props.history.push({
+                pathname: "createPage/step2",
+                state: {
+                    dateOfBirth: dateOfBirth,
+                    dateOfDeath: dateOfDeath,
+                    fistName: fistName,
+                    lastName: lastName,
+                    gender: gender,
+                    nationality: nationality,
+                    placeOfBirth: placeOfBirth,
+                    imageUrl: imageUrl,
+                    lifeProfile: lifeProfile
+                }
+            })
+        }
 
-        var reader = new FileReader();
-        reader.readAsDataURL(imageUrl);
-        reader.onloadend = function () {
-            var base64data = reader.result;
-            setImageUrl(base64data);
-        };
-
-        props.history.push({
-            pathname: "createPage/step2",
-            state: {
-                dateOfBirth: dateOfBirth,
-                dateOfDeath: dateOfDeath,
-                fistName: fistName,
-                lastName: lastName,
-                gender: gender,
-                nationality: nationality,
-                placeOfBirth: placeOfBirth,
-                imageUrl: imageUrl
-            }
-        });
     };
     const dateOfBirthChange = () => {
         const date = new Date();
-        console.log(date);
         setDateOfBirth(date)
     };
     const dateOfDeathChange = () => {
@@ -93,7 +92,7 @@ function Step1(props) {
                         <text className='title'>Building a page for condolence</text>
                         <p>Everything you need to build a page for deceased</p></div>
                 </div>
-                <div className='container'>
+                <div className='container' id='alert'>
                     <div className='createForm'>
                         <Label> Please upload the portrait of deceased</Label>
                         <UploadImg parentCallback={callback}/>
@@ -445,6 +444,10 @@ function Step1(props) {
                                        onChange={lifeProfileChange} required/>
                             </FormGroup>
                             <Button block className='mb-4'>Submit</Button>
+                            <Col className={error == false && 'd-none'}>
+                                <Alert color="danger">
+                                    Please upload the portrait!
+                                </Alert></Col>
                         </Form>
                     </div>
                 </div>

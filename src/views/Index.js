@@ -20,7 +20,7 @@ import SectionNavigation from "views/index-sections/SectionNavigation.js";
 import SectionNotifications from "views/index-sections/SectionNotifications.js";
 import SectionNucleoIcons from "views/index-sections/SectionNucleoIcons.js";
 import SectionProgress from "views/index-sections/SectionProgress.js";
-import SectionTypography from "views/index-sections/SectionTypography.js";
+import SectionTypography from "views/index-sections/PageIndex.js";
 
 import Step1 from "../components/Form/step1";
 import Step2 from "../components/Form/step2";
@@ -66,23 +66,15 @@ function Index() {
                             <Route exact path="/index">
                                 <IndexHeader/>
                             </Route>
-                            <Route path="/about">
-                                <SectionButtons/>
-                                <SectionCarousel/>
-                                <SectionDark/>
-                                <SectionDownload/>
-                                <SectionExamples/>
-                                <SectionJavaScript/>
-                                <SectionLogin/>
-                                <SectionNavbars/>
-                                <SectionNavigation/>
-                                <SectionNotifications/>
-                                <SectionNucleoIcons/>
-                                <SectionProgress/>
+                            <Route exact path="/PageIndex">
                                 <SectionTypography/>
                             </Route>
-                            <Route path="/craetePage" component={Step1}>
+                            <Route path="/about">
+
+                                <SectionProgress/>
                             </Route>
+                            <Route path="/craetePage" component={Step1} />
+
                             <Route path="/createPage/step2" component={Step2}/>
                         </Switch>
                         <DemoFooter/>

@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import {
     Button,
     Col,
-    Container,
+    Container, DropdownItem,
     Form,
     Input,
     InputGroup,
@@ -107,7 +107,7 @@ function SignUpModal({fromLogin = false}) {
                             </div>
                             <div className="divider"/>
                             <div className="right-side">
-                                <Link to="/about">
+                                <Link to='/craetePage'>
                                 <Button className="btn-link" color="danger" type="button">
                                    Go
                                 </Button>

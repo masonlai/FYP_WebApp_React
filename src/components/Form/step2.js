@@ -1,6 +1,8 @@
 import React, {useCallback, useState, useContext} from "react";
+import {AuthContext} from '../../views/Index'
 import {BackgroundContext} from '../../views/Index'
 import {useLocation, withRouter} from "react-router-dom";
+
 import {
     Button,
     Form,
@@ -8,41 +10,32 @@ import {
     Row,
     Col,
     Label,
-    FormGroup,
+    FormGroup, Alert,
 
 } from "reactstrap";
-import {CreatePage, test} from "../../assets/apiManager/apiManager";
-import theme1 from '../../assets/img/antoine-barres.jpg'
-import theme2 from '../../assets/img/dasdas.jpg'
-import theme3 from '../../assets/img/header.jpg'
-import theme4 from '../../assets/img/daniel-olahh.jpg'
-import on99 from "../../assets/img/apple-icon.png";
-
+import {CreatePage} from "../../assets/apiManager/apiManager";
+import UploadTheme from "./UploadTheme";
 
 function Step2(props) {
+    const AuthData = useContext(AuthContext);
     const theme = useContext(BackgroundContext);
     const location = useLocation();
-    const [position, setPosition] = useState('');
-    const [pageTheme, setPageTheme] = useState('');
-    const [sendTheme, setSendTheme] = useState('');
+    const [position, setPosition] = useState('leftTheme');
+    const [pageTheme, setPageTheme] = useState('Theme1');
+    const [error, setError] = useState(false);
+    const [personalTheme, setPersonalTheme] = useState(null);
+
+    const callback = (hooksResultImgUrl) => {
+        setPersonalTheme(hooksResultImgUrl)
+    };
     const handleSubmit = (data) => {
         data.preventDefault();
-        if(pageTheme == 'Theme1'){
-            setSendTheme(theme1)
-        }else if(pageTheme == 'Theme2'){
-            setSendTheme(theme2)
-        }else if(pageTheme == 'Theme3'){
-            setSendTheme(theme3)
-        }else if(pageTheme == 'Theme4'){
-            setSendTheme(theme4)
+        if (personalTheme != '') {
+            setPageTheme('')
         }
-        console.log(
-            props.location.state.gender,
-            props.location.state.imageUrl,
-            sendTheme,
-            props.location.state.lifeProfile,
-            position);
-        CreatePage(props.location.state.dateOfBirth,
+        CreatePage(
+            AuthData.AuthData.access_token,
+            props.location.state.dateOfBirth,
             props.location.state.dateOfDeath,
             props.location.state.fistName,
             props.location.state.lastName,
@@ -50,10 +43,13 @@ function Step2(props) {
             props.location.state.nationality,
             props.location.state.placeOfBirth,
             props.location.state.imageUrl,
-            sendTheme,
+            pageTheme, personalTheme,
             props.location.state.lifeProfile,
             position
-        )
+        ).then(function (value) {
+            console.log(value)
+
+        });
 
     };
     const themeChange = e => {
@@ -62,7 +58,8 @@ function Step2(props) {
     };
     const positionChange = e => {
         const {value} = e.target;
-        setPosition(value)
+        setPosition(value);
+        console.log(position)
     };
     const uploadChange = () => {
         console.log(props.location.state.imageUrl);
@@ -87,13 +84,13 @@ function Step2(props) {
                                         <div className='mt-2'>
 
                                             <input id="leftTheme" type="radio" name="theme-position" value="leftTheme"
-                                                   onChange={themeChange}/>
+                                                   onChange={positionChange}/>
                                             <label className="drinkcard-cc leftTheme" htmlFor="leftTheme"></label>
                                             <input id="centerTheme" type="radio" name="theme-position"
-                                                   value="centerTheme" onChange={themeChange}/>
+                                                   value="centerTheme" onChange={positionChange}/>
                                             <label className="drinkcard-cc centerTheme" htmlFor="centerTheme"></label>
                                             <input id="rightTheme" type="radio" name="theme-position" value="rightTheme"
-                                                   onChange={themeChange}/>
+                                                   onChange={positionChange}/>
                                             <label className="drinkcard-cc rightTheme" htmlFor="rightTheme"></label>
                                         </div>
                                     </div>
@@ -127,10 +124,7 @@ function Step2(props) {
                                     </div>
                                 </div>
                             </Col>
-                            <FormGroup>
-                                <Label for="themePhoto">Theme photo</Label>
-                                <Input type="file" name="themePhoto" id="themePhoto" onChange={uploadChange}/>
-                            </FormGroup>
+                            <UploadTheme parentCallback={callback}/>
 
                             <Button block className='mb-4'>Submit</Button>
                         </Form>
