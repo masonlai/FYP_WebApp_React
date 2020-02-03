@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/pageIndex.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/UploadTheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/CropperThemeModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PageIndex/PageIndex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/index-sections/PageIndex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/index-sections/PageDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/index-sections/PagePortfolio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/index-sections/SideMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/apiManager/apiManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_pagination.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/step1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/step2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/step2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/IndexHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/_card-profile.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index-sections/SectionButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionTypography.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionCarousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index-sections/SectionProgress.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +134,12 @@
       <workItem from="1580350369619" duration="14438000" />
       <workItem from="1580381564850" duration="19358000" />
       <workItem from="1580443787501" duration="19365000" />
+      <workItem from="1580569493617" duration="772000" />
+      <workItem from="1580571310897" duration="1142000" />
+      <workItem from="1580627354911" duration="748000" />
+      <workItem from="1580641322021" duration="16685000" />
+      <workItem from="1580704020017" duration="2421000" />
+      <workItem from="1580707116529" duration="16185000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -210,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580103246965</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="search function is successful">
+      <created>1580569589495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580569589495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +234,8 @@
     <MESSAGE value="node_modules" />
     <MESSAGE value="first form" />
     <MESSAGE value="fixing the image(base64) problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing the image(base64) problem" />
+    <MESSAGE value="search function is successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="search function is successful" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579920912929">
@@ -241,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579945704422" />
-    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1580103245144">
+    <state x="581" y="119" key="CommitChangelistDialog2" timestamp="1580569587778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580103245144" />
+    <state x="581" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580569587778" />
     <state x="184" y="92" width="1536" height="858" key="DiffContextDialog" timestamp="1580455398262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,10 +282,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579945502128" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1580103251915">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1580569601963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580103251915" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580569601963" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1580455498418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -285,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580471548074" />
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1580381665312">
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1580740634435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580381665312" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580740634435" />
     <state x="730" y="261" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1579712695319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -297,10 +306,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579487562844" />
-    <state x="891" y="126" width="807" height="732" key="find.popup" timestamp="1580446522524">
+    <state x="989" y="131" width="807" height="732" key="find.popup" timestamp="1580730502142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="891" y="126" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580446522524" />
+    <state x="989" y="131" width="807" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580730502142" />
     <state x="704" y="324" key="git4idea.merge.GitMergeDialog" timestamp="1579709519051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

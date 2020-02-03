@@ -9,7 +9,7 @@ import DemoFooter from "components/Footers/Footer.js";
 
 // index sections
 import SectionButtons from "views/index-sections/SectionButtons.js";
-import SectionCarousel from "views/index-sections/SectionCarousel.js";
+import PagePortfolio from "views/index-sections/PagePortfolio.js";
 import SectionDark from "views/index-sections/SectionDark.js";
 import SectionDownload from "views/index-sections/SectionDownload.js";
 import SectionExamples from "views/index-sections/SectionExamples.js";
@@ -19,8 +19,8 @@ import SectionNavbars from "views/index-sections/SectionNavbars.js";
 import SectionNavigation from "views/index-sections/SectionNavigation.js";
 import SectionNotifications from "views/index-sections/SectionNotifications.js";
 import SectionNucleoIcons from "views/index-sections/SectionNucleoIcons.js";
-import SectionProgress from "views/index-sections/SectionProgress.js";
-import SectionTypography from "views/index-sections/PageIndex.js";
+import PageDetails from "views/index-sections/PageDetails.js";
+import PageIndex from "views/index-sections/PageIndex.js";
 
 import Step1 from "../components/Form/step1";
 import Step2 from "../components/Form/step2";
@@ -64,14 +64,14 @@ function Index() {
                     <div className="main">
                         <Switch>
                             <Route exact path="/index">
-                                <IndexHeader/>
+                                <PagePortfolio/>
                             </Route>
                             <Route exact path="/PageIndex">
-                                <SectionTypography/>
+                                <PageIndex/>
                             </Route>
                             <Route path="/about">
 
-                                <SectionProgress/>
+                                <PageDetails/>
                             </Route>
                             <Route path="/craetePage" component={Step1} />
 

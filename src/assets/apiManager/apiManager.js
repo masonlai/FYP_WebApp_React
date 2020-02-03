@@ -95,6 +95,22 @@ export const getPageIndex = async(key,page) =>{
     }
 };
 
+export const getPageDetails = async(page) =>{
+     const settings = {
+        method: 'GET',
+        mode: 'cors',
+    };
+     const path = '/GetPageIndex/'+page;
+    try {
+        const fetchResponse = await fetch(postApi(path), settings);
+        const data = await fetchResponse.json();
+        return data
+
+    } catch (e) {
+        return e;
+    }
+};
+
 export const test = async (file) => {
     const formdata = new FormData();
 
