@@ -1,13 +1,14 @@
-import React, {useContext, useState, useEffect} from "react";
+/*!
+pageIndex is using for show all matching record of key from input of header
 
-// reactstrap components
+*/
+
+import React, {useContext, useState, useEffect} from "react";
 import {Media, Row, Col, Pagination, PaginationItem, PaginationLink} from "reactstrap";
 import {getPageIndex} from "../../assets/apiManager/apiManager";
 import {BackgroundContext} from '../../views/Index'
 import '../../assets/scss/paper-kit/cards/pageIndex.scss'
-import { useLocation, withRouter} from "react-router-dom";
-
-// core components
+import {useLocation, withRouter} from "react-router-dom";
 
 function PageIndex(props) {
     const location = useLocation();
@@ -19,57 +20,102 @@ function PageIndex(props) {
     useEffect(() => {
         getPageIndex(key, page).then(function (value) {
             setIndex(value);
-            if (value.one.next_num != 'null') {
-                setRows(<Pagination>
-                    <PaginationItem active>
+            {/*if no matching page, return to index*/}
+            if (typeof value.one === "undefined") {
+                props.history.push({
+                    pathname: "index",
+                    state: {
+                        error: true
+                    }
+                })
+            } else {
+                {/*set button of pagination*/}
+                if (value.one.next_num != false) {
+                    setRows(<Pagination>
+                        <PaginationItem active>
 
-                        <PaginationLink href="#" onClick={handlePage} value={page}>
-                            {page}
-                        </PaginationLink>
+                            <PaginationLink href="#" onClick={handlePage} value={page}>
+                                {page}
+                            </PaginationLink>
 
-                    </PaginationItem>
+                        </PaginationItem>
 
-                    <PaginationItem>
-                        <PaginationLink href="#" onClick={handlePage} value={page + 1}>
-                            {page + 1}
-                        </PaginationLink>
-                    </PaginationItem></Pagination>);
-
+                        <PaginationItem>
+                            <PaginationLink href="#" onClick={handlePage} value={page + 1}>
+                                {page + 1}
+                            </PaginationLink>
+                        </PaginationItem></Pagination>);
+                }
             }
         })
     }, []);
+
     const handlePage = (e) => {
         e.preventDefault();
         const NewValue = e.target.getAttribute("value");
         setPage(NewValue);
         getPageIndex(key, NewValue).then(function (value) {
             setIndex(value);
-            setRows(<Pagination>
-                <PaginationItem>
-
-                    <PaginationLink href="#" onClick={handlePage} value={NewValue - 1}>
-                        {NewValue - 1}
-                    </PaginationLink>
-
-                </PaginationItem>
-                <PaginationItem active>
-
-                    <PaginationLink href="#" onClick={handlePage} value={NewValue}>
-                        {NewValue}
-                    </PaginationLink>
-
-                </PaginationItem>
-
-                <PaginationItem>
-                    <PaginationLink href="#" onClick={handlePage} value={parseInt(NewValue) + 1}>
-                        {parseInt(NewValue) + 1}
-                    </PaginationLink>
-                </PaginationItem></Pagination>)
+            if (value.one.prev_num != null) {
+                if (value.one.next_num != false) {
+                    setRows(<Pagination>
+                        <PaginationItem>
+                            <PaginationLink href="#" onClick={handlePage} value={NewValue - 1}>
+                                {NewValue - 1}
+                            </PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem active>
+                            <PaginationLink href="#" onClick={handlePage} value={NewValue}>
+                                {NewValue}
+                            </PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationLink href="#" onClick={handlePage} value={parseInt(NewValue) + 1}>
+                                {parseInt(NewValue) + 1}
+                            </PaginationLink>
+                        </PaginationItem>
+                    </Pagination>)
+                } else {
+                    setRows(<Pagination>
+                        <PaginationItem>
+                            <PaginationLink href="#" onClick={handlePage} value={NewValue - 1}>
+                                {NewValue - 1}
+                            </PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem active>
+                            <PaginationLink href="#" onClick={handlePage} value={NewValue}>
+                                {NewValue}
+                            </PaginationLink>
+                        </PaginationItem>
+                    </Pagination>)
+                }
+            } else {
+                setRows(<Pagination>
+                    <PaginationItem active>
+                        <PaginationLink href="#" onClick={handlePage} value={NewValue}>
+                            {NewValue}
+                        </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href="#" onClick={handlePage} value={parseInt(NewValue) + 1}>
+                            {parseInt(NewValue) + 1}
+                        </PaginationLink>
+                    </PaginationItem>
+                </Pagination>)
+            }
         })
-
     };
+
     const split = (string) => {
         return string.split(" ")
+    };
+    const handleEnter = (e) => {
+        props.history.push({
+            pathname: "Page",
+            state: {
+                id: e.currentTarget.getAttribute('value'),
+            }
+        })
     };
     return (
 
@@ -79,9 +125,9 @@ function PageIndex(props) {
                     <div className='createForm'>
                         <div style={{marginTop: '3vh'}}/>
                         {Object.entries(index).map(([key, value]) => {
-                            return <div className='space'>
+                            return <div className='space' onClick={handleEnter} value={value.id}>
                                 <Media>
-                                    <Media left href="#">
+                                    <Media left onClick={handleEnter} value={value.id}>
                                         <div className='frame'>
                                             <Media className='mediaImage' object src={value.portrait}
                                                    alt="Generic placeholder image"/>

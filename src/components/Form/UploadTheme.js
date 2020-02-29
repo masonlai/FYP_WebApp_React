@@ -40,7 +40,7 @@ function UploadTheme({ parentCallback }) {
                     <div className='row'>
                         <div className='col-xs-12 m-auto'>
                             <label className="upload-input-label">
-                                <i className="nc-icon nc-cloud-upload-94"/>{'  '}<span>Upload personal theme</span>
+                                <i className="fa fa-upload"></i>{'  '}<span>Upload personal theme</span>
                                 <Input type="file" name="file" id="exampleFile" accept="image/jpeg,image/jpg,image/png"
                                        className="base-upload-input"
                                        onChange={handleHooksFileChange}/>

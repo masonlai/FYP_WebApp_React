@@ -1,4 +1,4 @@
-import React, {useCallback, useState, useContext} from "react";
+import React, {useState, useContext} from "react";
 import {BackgroundContext} from '../../views/Index'
 import {withRouter, useHistory} from "react-router-dom";
 import {
@@ -36,7 +36,7 @@ function Step1(props) {
             setError(true)
         } else {
             props.history.push({
-                pathname: "createPage/step2",
+                pathname: "createPageStep2",
                 state: {
                     dateOfBirth: dateOfBirth,
                     dateOfDeath: dateOfDeath,

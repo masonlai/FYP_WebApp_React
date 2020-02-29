@@ -1,36 +1,20 @@
 import React, {useEffect, createContext, useContext, useState} from "react";
-
-// reactstrap components
-
-// core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DemoFooter from "components/Footers/Footer.js";
-
-// index sections
-import SectionButtons from "views/index-sections/SectionButtons.js";
-import PagePortfolio from "views/index-sections/PagePortfolio.js";
-import SectionDark from "views/index-sections/SectionDark.js";
-import SectionDownload from "views/index-sections/SectionDownload.js";
-import SectionExamples from "views/index-sections/SectionExamples.js";
-import SectionJavaScript from "views/index-sections/SectionJavaScript.js";
-import SectionLogin from "views/index-sections/SectionLogin.js";
-import SectionNavbars from "views/index-sections/SectionNavbars.js";
-import SectionNavigation from "views/index-sections/SectionNavigation.js";
-import SectionNotifications from "views/index-sections/SectionNotifications.js";
-import SectionNucleoIcons from "views/index-sections/SectionNucleoIcons.js";
-import PageDetails from "views/index-sections/PageDetails.js";
+import Page from "views/index-sections/Page.js";
 import PageIndex from "views/index-sections/PageIndex.js";
-
+import Tutorial from '../components/Tutorial/Tutorial'
 import Step1 from "../components/Form/step1";
 import Step2 from "../components/Form/step2";
+import Aboutus from "../components/aboutus";
+import MusicPlayer from './TEST'
 
 
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 
 export const AuthContext = createContext();
@@ -64,18 +48,20 @@ function Index() {
                     <div className="main">
                         <Switch>
                             <Route exact path="/index">
-                                <PagePortfolio/>
+                                <IndexHeader/>
                             </Route>
                             <Route exact path="/PageIndex">
                                 <PageIndex/>
                             </Route>
                             <Route path="/about">
 
-                                <PageDetails/>
+                                <Page/>
                             </Route>
                             <Route path="/craetePage" component={Step1} />
-
-                            <Route path="/createPage/step2" component={Step2}/>
+                            <Route path="/createPageStep2" component={Step2}/>
+                            <Route path="/Page" component={Page}/>
+                            <Route path="/Tutorial" component={Tutorial}/>
+                            <Route path="/Aboutus" component={Aboutus}/>
                         </Switch>
                         <DemoFooter/>
                     </div>

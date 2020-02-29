@@ -3,13 +3,14 @@ import SignUpModal from "components/Modal/SignUpModal.js";
 import {
     Link,
 } from "react-router-dom";
-// reactstrap components
+
 import {
     Form,
     Container,
     Input,
     InputGroupAddon,
     InputGroup, Button,
+    Alert
 } from "reactstrap";
 import {withRouter, useHistory} from "react-router-dom";
 
@@ -20,6 +21,7 @@ function IndexHeader(props) {
         const {value} = e.target;
         setSearch(value);
     };
+
     const handleSubmit = (data) => {
         if (search == '') {
             data.preventDefault();
@@ -28,7 +30,7 @@ function IndexHeader(props) {
                 pathname: "PageIndex",
                 state: {
                     key: search,
-                    page:1
+                    page: 1
                 }
             })
         }
@@ -43,6 +45,7 @@ function IndexHeader(props) {
                         "url(" + require("assets/img/a.jpg") + ")"
                 }}
             >
+
                 <div className="filter"/>
                 <div className="content-center">
                     <Container>
@@ -63,11 +66,16 @@ function IndexHeader(props) {
                             </div>
                         </div>
                         <h2 className="presentation-subtitle text-center">
+                            {typeof props.location.state != 'undefined' &&
+                            <Alert color="danger">
+                                No matching page!
+                            </Alert>
+                            }
                             Here for you to commemorate deceased a online worship system
                         </h2>
                         <div className='row' style={{marginTop: '4em'}}>
                             <div className='offset-lg-1 col-sm-12 col-lg-3'>
-                                <Link to='/PageIndex'>
+                                <Link to='/Tutorial'>
                                     <Button color="primary" block outline type="button" className="mr-1" size="lg">
                                         Tutorial
                                     </Button></Link>

@@ -1,4 +1,4 @@
-import React, {useCallback, useState, useContext} from "react";
+import React, {useState, useContext} from "react";
 import {AuthContext} from '../../views/Index'
 import {BackgroundContext} from '../../views/Index'
 import {useLocation, withRouter} from "react-router-dom";
@@ -10,7 +10,7 @@ import {
     Row,
     Col,
     Label,
-    FormGroup, Alert,
+    FormGroup, FormText, Spinner,
 
 } from "reactstrap";
 import {CreatePage} from "../../assets/apiManager/apiManager";
@@ -24,16 +24,19 @@ function Step2(props) {
     const [pageTheme, setPageTheme] = useState('Theme1');
     const [error, setError] = useState(false);
     const [personalTheme, setPersonalTheme] = useState(null);
+    const [backgroundMusic, setBackgroundMusic] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const callback = (hooksResultImgUrl) => {
         setPersonalTheme(hooksResultImgUrl)
     };
     const handleSubmit = (data) => {
         data.preventDefault();
+        setLoading(true);
         if (personalTheme != '') {
             setPageTheme('')
         }
-        CreatePage(
+        let result = CreatePage(
             AuthData.AuthData.access_token,
             props.location.state.dateOfBirth,
             props.location.state.dateOfDeath,
@@ -45,12 +48,26 @@ function Step2(props) {
             props.location.state.imageUrl,
             pageTheme, personalTheme,
             props.location.state.lifeProfile,
-            position
-        ).then(function (value) {
-            console.log(value)
+            position,
+            backgroundMusic
+        );
+        if (!result.error) {
+            const resolve = Promise.resolve(result);
+            resolve.then(function (value) {
+                props.history.push({
+                    pathname: "Page",
+                    state: {
+                        id: value.id
+                    }
+                })
 
-        });
+            })
+        }
 
+    };
+
+    const musicChange = e => {
+        setBackgroundMusic(e.target.files[0])
     };
     const themeChange = e => {
         const {value} = e.target;
@@ -59,12 +76,8 @@ function Step2(props) {
     const positionChange = e => {
         const {value} = e.target;
         setPosition(value);
-        console.log(position)
     };
-    const uploadChange = () => {
-        console.log(props.location.state.imageUrl);
-        console.log(document.getElementById('themePhoto').files[0])
-    };
+
 
     return (
         <div style={theme}>
@@ -125,8 +138,15 @@ function Step2(props) {
                                 </div>
                             </Col>
                             <UploadTheme parentCallback={callback}/>
+                            <FormGroup>
+                                <Label for="exampleFile">Upload background music (mp3 file)</Label>
+                                <Input type="file" name="file" id="exampleFile" accept=".mp3,audio/*" onChange={musicChange}/>
+                                <FormText color="muted">
+                                    Background music will be played when guests are Surfing the website.
+                                </FormText>
+                            </FormGroup>
 
-                            <Button block className='mb-4'>Submit</Button>
+                            <Button block className='mb-4'>{loading ? <Spinner animation="border" variant="light"/> : 'Submit'}</Button>
                         </Form>
                     </div>
                 </div>

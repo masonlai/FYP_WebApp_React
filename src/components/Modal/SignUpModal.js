@@ -2,13 +2,13 @@ import React, {useContext, useState} from "react";
 import {
     Button,
     Col,
-    Container, DropdownItem,
+    Container,
     Form,
     Input,
     InputGroup,
     InputGroupAddon,
     InputGroupText,
-    Modal, NavLink,
+    Modal,
     Row,
     Spinner
 } from "reactstrap";
@@ -144,7 +144,7 @@ function SignUpModal({fromLogin = false}) {
                                             <InputGroup className="form-group-no-border">
                                                 <InputGroupAddon addonType="prepend">
                                                     <InputGroupText>
-                                                        <i className="nc-icon nc-badge"/>
+                                                        <i className="fa fa-user-circle-o" aria-hidden="true"></i>
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input placeholder="Username" type="text" value={username}
@@ -154,7 +154,7 @@ function SignUpModal({fromLogin = false}) {
                                             <InputGroup className="form-group-no-border">
                                                 <InputGroupAddon addonType="prepend">
                                                     <InputGroupText>
-                                                        <i className="nc-icon nc-key-25"/>
+                                                        <i className="fa fa-key" aria-hidden="true"></i>
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input placeholder="Password" type="password" value={password}
@@ -164,7 +164,7 @@ function SignUpModal({fromLogin = false}) {
                                             <InputGroup className="form-group-no-border">
                                                 <InputGroupAddon addonType="prepend">
                                                     <InputGroupText>
-                                                        <i className="nc-icon nc-badge"/>
+                                                        <i className="fa fa-envelope-o" aria-hidden="true"></i>
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input placeholder="Email" type="email" value={email}
@@ -178,7 +178,7 @@ function SignUpModal({fromLogin = false}) {
                                             <InputGroup className="form-group-no-border">
                                                 <InputGroupAddon addonType="prepend">
                                                     <InputGroupText>
-                                                        <i className="nc-icon nc-globe"/>
+                                                        <i className="fa fa-university" aria-hidden="true"></i>
                                                     </InputGroupText>
                                                 </InputGroupAddon>
                                                 <Input type="select" name="select" id="exampleSelect" value={religion}

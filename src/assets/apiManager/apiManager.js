@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import fetch from 'isomorphic-fetch';
 import theme from '../img/a.jpg'
-
+/* http://masonlai123.pythonanywhere.com/*/
 let postApi = (path) => {
     return 'http://127.0.0.1:5000' + path;
 };
@@ -48,7 +48,7 @@ export const Signup = async (username, password, email, religion) => {
 };
 
 export const CreatePage = async (AuthData, dateOfBirth, dateOfDeath, fistName
-    , lastName, gender, nationality, placeOfBirth, imageUrl, theme, personal_theme, lifeProfile, position) => {
+    , lastName, gender, nationality, placeOfBirth, imageUrl, theme, personal_theme, lifeProfile, position, backgroundMusic) => {
     const formdata = new FormData();
     formdata.append("Authorization", AuthData);
     formdata.append("first_name", fistName);
@@ -63,6 +63,7 @@ export const CreatePage = async (AuthData, dateOfBirth, dateOfDeath, fistName
     formdata.append("theme", theme);
     formdata.append("personal_theme", personal_theme);
     formdata.append("portrait_position", position);
+    formdata.append("background_music", backgroundMusic);
 
     const settings = {
         method: 'POST',
@@ -79,12 +80,12 @@ export const CreatePage = async (AuthData, dateOfBirth, dateOfDeath, fistName
     }
 };
 
-export const getPageIndex = async(key,page) =>{
-     const settings = {
+export const getPageIndex = async (key, page) => {
+    const settings = {
         method: 'GET',
         mode: 'cors',
     };
-     const path = '/GetPageIndex/'+key+'/'+page;
+    const path = '/GetPageIndex/' + key + '/' + page;
     try {
         const fetchResponse = await fetch(postApi(path), settings);
         const data = await fetchResponse.json();
@@ -95,12 +96,12 @@ export const getPageIndex = async(key,page) =>{
     }
 };
 
-export const getPageDetails = async(page) =>{
-     const settings = {
+export const getPageDetails = async (page) => {
+    const settings = {
         method: 'GET',
         mode: 'cors',
     };
-     const path = '/GetPageIndex/'+page;
+    const path = '/Page/' + page;
     try {
         const fetchResponse = await fetch(postApi(path), settings);
         const data = await fetchResponse.json();
@@ -111,17 +112,54 @@ export const getPageDetails = async(page) =>{
     }
 };
 
-export const test = async (file) => {
+export const getComments = async (id, page, desc='true') => {
+    const settings = {
+        method: 'GET',
+        mode: 'cors',
+    };
+    const path = '/GetComment/' + id + '/' + page + '/' + desc;
+    try {
+        const fetchResponse = await fetch(postApi(path), settings);
+        const data = await fetchResponse.json();
+        return data
+
+    } catch (e) {
+        return e;
+    }
+};
+
+export const postComments = async (AuthData, page_id, content) => {
     const formdata = new FormData();
+    formdata.append("Authorization", AuthData);
+    formdata.append("page_id", page_id);
+    formdata.append("content", content);
+    const settings = {
+        method: 'POST',
+        body: formdata,
+        mode: 'cors'
+    };
+    try {
+        const fetchResponse = await fetch(postApi('/CraeteComment'), settings);
+        const data = await fetchResponse.json();
+        return data
 
-    formdata.append("file", file);
+    } catch (e) {
+        return e;
+    }
+};
+
+export const visitRecord = async (page_id, Authorization, flower) => {
+    const formdata = new FormData();
+    formdata.append("page_id", page_id);
+    formdata.append("Authorization", Authorization);
+    formdata.append("flower_name", flower);
     const settings = {
         method: 'POST',
         body: formdata,
         mode: 'cors',
     };
     try {
-        const fetchResponse = await fetch(postApi('/test'), settings);
+        const fetchResponse = await fetch(postApi('/visitRecord'), settings);
         const data = await fetchResponse.json();
         return data
 
@@ -129,4 +167,21 @@ export const test = async (file) => {
         return e;
     }
 
+};
+
+export const getRecord = async (page_id) => {
+    const settings = {
+        method: 'GET',
+        mode: 'cors',
+    };
+    const path = '/get_visitRecord/' + page_id;
+    console.log(path);
+    try {
+        const fetchResponse = await fetch(postApi(path), settings);
+        const data = await fetchResponse.json();
+        return data
+
+    } catch (e) {
+        return e;
+    }
 };

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/paper-kit-react-master.iml" filepath="$PROJECT_DIR$/.idea/paper-kit-react-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FYP_frontEnd.iml" filepath="$PROJECT_DIR$/.idea/FYP_frontEnd.iml" />
     </modules>
   </component>
 </project>

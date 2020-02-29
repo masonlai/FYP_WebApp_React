@@ -1,43 +1,78 @@
-.backgorund-page {
-  background-image: url("http://127.0.0.1:5000/Theme/501");
-  background-color: #cccccc;
-  height: 100VH;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+@media only screen and (min-width: 575.99px) {
+  .tombstoneBackGround {
+    background-color: #d3d9df;
+    height: 500px;
+    width: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
 
+    .font {
+      color: #0b1011;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      border-color: #ffffff;
+      margin-top: 8vh;
+      margin-left: 18vh;
+      font-family: 'Zhi Mang Xing', cursive;
+      font-size: 3.5em;
+
+    }
+
+    .date {
+      color: #0b1011;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      border-color: #ffffff;
+      margin-left: 20vh;
+      font-family: 'Zhi Mang Xing', cursive;
+      font-size: 4em;
+    }
+
+    .to {
+      color: #0b1011;
+      text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+      border-color: #ffffff;
+      margin-left: 35vh;
+      font-size: 2em;
+      font-family: 'Zhi Mang Xing', cursive;
+    }
+  }
 }
 
-.tombstoneBackGround {
-  background-color: #d3d9df;
-  height: 500px;
-  width: 700px;
-  background-position: center;
-  background-repeat: no-repeat;
+@media only screen and (max-width: 575.98px) {
+  .tombstoneBackGround {
+    background-color: #d3d9df;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px;
 
-  .font {
-    color: #0b1011;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    border-color: #ffffff;
-    margin-top: 8vh;
-    margin-left: 20vh;
-  }
+    .font {
+      color: #0b1011;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      border-color: #ffffff;
+      margin-top: 4vh;
+      margin-left: 15vh;
+      font-family: 'Zhi Mang Xing', cursive;
+      font-size: 2em;
 
-  .date {
-    color: #0b1011;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    border-color: #ffffff;
-    margin-left: 20vh;
-  }
+    }
 
-  .to {
-    color: #0b1011;
-    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
-    border-color: #ffffff;
-    margin-left: 35vh;
-    font-size: 2em;
+    .date {
+      color: #0b1011;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      border-color: #ffffff;
+      margin-left: 18vh;
+      font-family: 'Zhi Mang Xing', cursive;
+      font-size: 2em;
+    }
+
+    .to {
+      color: #0b1011;
+      text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+      border-color: #ffffff;
+      margin-left: 25vh;
+      font-size: 2em;
+      font-family: 'Zhi Mang Xing', cursive;
+    }
   }
 }
 
@@ -50,6 +85,26 @@
   border-width: 6px;
 }
 
+.rightTheme-page {
+  position: absolute;
+  margin-top: 25vh;
+  right: 20vh
+}
+
+.leftTheme-page {
+  margin-top: 25vh;
+  margin-left: 20vh
+}
+
+.centerTheme-page {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .portrait {
   width: 100%;
   height: 100%;
@@ -58,12 +113,15 @@
 .sideMenubtu {
   position: fixed;
   margin-top: 50vh;
+  z-index: 999;
 }
 
 .sideMenu {
   background-color: #ffffff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .overflow {
@@ -76,51 +134,66 @@
 
 .buttonItem {
   margin-top: 1.5vh;
-  width: 15vh;
-  margin-bottom: 1.5vh;
   color: #0b1011;
+}
+
+.buttonContainer {
+  margin-right: 10px;
+}
+
+.buttonItem:hover {
+  background-color: #95999c;
+  color: white;
+}
+
+.buttonItem:focus {
+  background-color: #95999c;
+  color: white;
 }
 
 .menu {
   height: 15vh;
   width: 5vh;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 @media only screen and (max-width: 575.98px) {
   .Portfolio {
     background-Color: white;
-    min-height: 100vh;
+    min-height: 80vh;
     overflow: hidden;
     position: relative;
     width: 80%;
     left: 10%;
-    margin-top: 27%;
+    margin-top: 20%;
     margin-bottom: 17%;
-    opacity:0.9
-
+    opacity: 0.9;
+    font-size: 0.6em;
   }
   p {
     display: none
   }
   .title {
-    color: white;
     font-weight: 500;
-    color: white;
-    font-size: 25px;
+    color: black;
+    font-size: 0.5em;
   }
 }
 
 @media only screen and (min-width: 575.99px) {
   .Portfolio {
     background-Color: white;
-    min-height: 100vh;
+    min-height: 80vh;
     overflow: hidden;
     position: relative;
     width: 60%;
     left: 20%;
     margin-top: 8%;
     margin-bottom: 4%;
-    opacity:0.9;
+    opacity: 0.9;
 
     p {
       margin-left: 27%;
@@ -132,13 +205,56 @@
     .title {
       color: white;
       font-weight: 500;
-      color: white;
       font-size: 25px;
     }
   }
 }
 
-.PFimg{
+.PFimg {
   margin-top: 7vh;
   margin-left: 7vh;
 }
+
+.pageText {
+  font-size: 3em;
+  font-family: 'Zhi Mang Xing', cursive;;
+}
+
+.name {
+  font-size: 4.5em;
+  font-family: 'Zhi Mang Xing', cursive;;
+}
+
+.flowerRow {
+  margin-bottom: 20vh;
+
+}
+
+@media only screen and (max-width: 575.98px) {
+  .flower {
+    width: 14vh;
+    height: 14vh;
+    background-color: transparent;
+    display: block;
+  }
+  .divFlower {
+    text-align: center;
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 575.99px) {
+  .flower {
+    width: 20vh;
+    height: 20vh;
+    background-color: transparent;
+    display: block;
+  }
+  .divFlower {
+    text-align: center;
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 1.5em;
+  }
+}
+

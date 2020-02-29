@@ -2,7 +2,6 @@ import React, {useContext, useState} from "react";
 import {AuthContext} from '../../views/Index'
 import {Login} from '../../assets/apiManager/apiManager'
 
-
 import {
     Button,
     InputGroupAddon,
@@ -15,12 +14,15 @@ import {
     Spinner,
     Input,
     NavItem,
-    NavLink, Nav, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem
+    NavLink, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem,
+    UncontrolledDropdown
 } from "reactstrap";
 import {Link, useLocation} from "react-router-dom";
+import {MobileContext} from '../Navbars/IndexNavbar'
+import getWindowWidth from "../../assets/apiManager/getWindowWidth";
 
 function LoginModal(props) {
-
+    const {toggleNavbarCollapse} = useContext(MobileContext);
     const [modal, setModal] = useState(false);
     const [loading, setLoading] = useState(false);
     const [username, setUsername] = useState('');
@@ -28,10 +30,12 @@ function LoginModal(props) {
     const [error, setError] = useState('');
     const {toggleAuth} = useContext(AuthContext);
     const [dropdownOpen, setOpen] = useState(false);
+    const {height, width} = getWindowWidth();
 
     const toggle = () => setOpen(!dropdownOpen);
     const toggleModal = () => {
         setModal(!modal);
+        toggleNavbarCollapse()
     };
 
     const location = useLocation();
@@ -41,6 +45,7 @@ function LoginModal(props) {
         Login(username, password).then(function (value) {
             toggleAuth(value);
             if (value.access_token) {
+                toggleNavbarCollapse();
                 setModal(!modal);
                 setError('');
                 setLoading(false)
@@ -71,43 +76,32 @@ function LoginModal(props) {
     return (
         <>
             {auth.AuthData.username ?
-                <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}
-                                style={{backgroundColor: 'transparent', border: 'transparent'}}>
-                    <DropdownToggle caret style={{backgroundColor: 'transparent', border: 'transparent'}}>
-                        <a style={location.pathname != '/index' ? {
-                            color: '#403D39',
-                            'font-weight': '600'
-                        } : {color: '#FFFFFF', 'font-weight': '600'}}><i
-                            className="fa fa-user" style={location.pathname != '/index' ? {
-                            color: '#403D39',
-                            'font-weight': '600'
-                        } : {color: '#FFFFFF', 'font-weight': '600'}}/>
-                            <p className="d-lg-none"> {auth.AuthData.username}</p>
-                            {auth.AuthData.username}</a>
+                <NavItem>
+                <UncontrolledDropdown setActiveFromChild>
+                    <DropdownToggle tag="a" className="nav-link" caret
+                                    style={location.pathname != '/index' || width < 575.98 ?
+                                        {color: '#403D39', 'font-weight': '600'} :
+                                        {color: '#FFFFFF', 'font-weight': '600'}}>{auth.AuthData.username}
                     </DropdownToggle>
                     <DropdownMenu>
-
                         <Link to="/craetePage"><DropdownItem>Create a webpage</DropdownItem></Link>
                         <DropdownItem>Edit webpages</DropdownItem>
                         <DropdownItem onClick={logoutHandler}>Logout</DropdownItem>
                     </DropdownMenu>
-                </ButtonDropdown>
-
-
+                </UncontrolledDropdown>
+                </NavItem>
                 : <NavItem>
                     <NavLink
                         data-placement="bottom"
                         target="_blank"
-                    > <i className="fa fa-sign-in"/>
-                        <p href='#' onClick={toggleModal} className="d-lg-none"
-                           style={{'color': '#403D39', 'fontWeight': '600'}}>Sign In</p>
+                    >
 
-                        <a href='#' onClick={toggleModal}
-                           style={location.pathname != '/index' ? {color: '#403D39', 'font-weight': '600'} : {
-                               color: '#FFFFFF',
-                               'font-weight': '600'
-                           }}>
-                            Sign In</a>
+
+                        <a href="javascript:void(0);" onClick={toggleModal}
+                           style={location.pathname != '/index' || width < 575.98 ?
+                               {color: '#403D39', 'font-weight': '600'} :
+                               {color: '#FFFFFF', 'font-weight': '600'}}>
+                            <i className="fa fa-sign-in"/>Sign In</a>
 
                     </NavLink>
                 </NavItem>
@@ -143,7 +137,7 @@ function LoginModal(props) {
                                         className={error ? "form-group-no-border has-danger" : "form-group-no-border"}>
                                         <InputGroupAddon addonType="prepend">
                                             <InputGroupText>
-                                                <i className="nc-icon nc-badge"/>
+                                                <i className="fa fa-user-circle-o" aria-hidden="true"></i>
                                             </InputGroupText>
                                         </InputGroupAddon>
                                         <Input placeholder="Username" type="text" value={username}
@@ -154,7 +148,7 @@ function LoginModal(props) {
                                         className={error ? "form-group-no-border has-danger" : "form-group-no-border"}>
                                         <InputGroupAddon addonType="prepend">
                                             <InputGroupText>
-                                                <i className="nc-icon nc-key-25"/>
+                                                <i className="fa fa-key" aria-hidden="true"></i>
                                             </InputGroupText>
                                         </InputGroupAddon>
                                         <Input placeholder="Password" type="password" value={password}
