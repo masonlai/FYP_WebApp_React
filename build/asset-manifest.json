@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.181e9d11.chunk.css",
+    "main.js": "/static/js/main.57a2e8f0.chunk.js",
+    "main.js.map": "/static/js/main.57a2e8f0.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.423b2664.chunk.css": "/static/css/2.423b2664.chunk.css",
+    "static/js/2.c7dde021.chunk.js": "/static/js/2.c7dde021.chunk.js",
+    "static/js/2.c7dde021.chunk.js.map": "/static/js/2.c7dde021.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.dff24a6bf1b0a99b35d00dff848802dc.js": "/precache-manifest.dff24a6bf1b0a99b35d00dff848802dc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.423b2664.chunk.css.map": "/static/css/2.423b2664.chunk.css.map",
+    "static/css/main.181e9d11.chunk.css.map": "/static/css/main.181e9d11.chunk.css.map",
+    "static/media/paper-kit.scss": "/static/media/nucleo-icons.d41d8cd9.woff2",
+    "static/media/a.jpg": "/static/media/a.b10b01d5.jpg",
+    "static/media/clouds.png": "/static/media/clouds.61c4e000.png",
+    "static/media/flower1.png": "/static/media/flower1.586ec497.png",
+    "static/media/flower2.png": "/static/media/flower2.9e746d1b.png",
+    "static/media/flower3.png": "/static/media/flower3.ce018c57.png",
+    "static/media/flower4.png": "/static/media/flower4.81e3fcf3.png",
+    "static/media/fog-low.png": "/static/media/fog-low.7812184c.png",
+    "static/media/full-bloom.png": "/static/media/full-bloom.c614347a.png",
+    "static/media/tombstone.png": "/static/media/tombstone.f3351daa.png"
+  }
+}
