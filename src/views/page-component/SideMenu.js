@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import getWindowWidth from "../../assets/apiManager/getWindowWidth";
 
-const SideMenu = () => {
+const SideMenu = (props) => {
     const [openPanel, setOpenPanel] = useState(false);
     const [size, setSize] = useState(10);
     const ref = useRef();
@@ -26,12 +26,18 @@ const SideMenu = () => {
             setSize(40)
         }
     },[]);
+    const side_button = {
+        borderTopRightRadius: 10,
+        borderBottomRightRadius: 10,
+        borderBottomLeftRadius: 0,
+        borderTopLeftRadius: 0,
+    }
 
     return (
         <>
             <div className='sideMenubtu'>
                 <div>
-                    <Button className='menu' onClick={() => setOpenPanel(true)}>
+                    <Button style={side_button} onClick={() => setOpenPanel(true)}>
                         <div>M<br/>e<br/>n<br/>u</div>
                     </Button>
                 </div>
@@ -44,17 +50,18 @@ const SideMenu = () => {
                         <div className='sideMenu buttonTop'>
                             <text style={{color: 'white'}}>.</text>
                             <div className='buttonContainer'>
-                                <Link to='Page'><Button outline color="secondary" size="lg" block onClick={() => setOpenPanel(false)}
+                                <Link to={`${props.url}`}><Button color="secondary" size="lg" block onClick={() => setOpenPanel(false)}
                                                         className='buttonItem'>Home</Button></Link>
                             </div>
                             <br/>
                             <div className='buttonContainer'>
-                                <Link to='portfolio'><Button outline color="secondary" size="lg" block onClick={() => setOpenPanel(false)}
+                                <Link to={`${props.url}/Portfolio`}><Button color="secondary" size="lg" block onClick={() => setOpenPanel(false)}
                                                              className='buttonItem'>Portfolio</Button></Link></div>
                             <br/>
-                            <div className='buttonContainer'>
-                                <Link to='guestbook'><Button outline color="secondary" size="lg" block onClick={() => setOpenPanel(false)}
+                            <div className='buttonContainer mb-5'>
+                                <Link to={`${props.url}/Guestbook`}><Button color="secondary" size="lg" block onClick={() => setOpenPanel(false)}
                                                              className='buttonItem'>Guestbook</Button></Link></div>
+                            <test style={{color:'white'}}>{'a'}</test>
 
                         </div>
                     </div>

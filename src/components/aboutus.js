@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {BackgroundContext} from '../views/Index'
+import {BackgroundContext} from '../views/Indexpage'
 import '../../src/assets/scss/paper-kit/cards/pageIndex.scss'
 
 

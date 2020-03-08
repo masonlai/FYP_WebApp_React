@@ -12,11 +12,11 @@ import MusicPlayer from '../page-component/BackgroundMusic'
 import {getPageDetails} from "../../assets/apiManager/apiManager"
 import {getRecord} from "../../assets/apiManager/apiManager"
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
-import {AuthContext} from "../Index";
+import {AuthContext} from "../Indexpage";
 
 function Page(props) {
     const auth = useContext(AuthContext);
@@ -37,7 +37,7 @@ function Page(props) {
     useEffect(() => {
         {/* getPageDetails is a fetch script for sending post request to backend server and get the details of page */
         }
-        getPageDetails(props.location.state.id).then(function (value) {
+        getPageDetails(props.match.params.id).then(function (value) {
             setDetails(value);
             setDeathday(split(value.date_of_death)[1] + ' ' + split(value.date_of_death)[2] + ' ' + split(value.date_of_death)[3]);
             setBirthday(split(value.date_of_birth)[1] + ' ' + split(value.date_of_birth)[2] + ' ' + split(value.date_of_birth)[3]);
@@ -52,7 +52,7 @@ function Page(props) {
                 backgroundImage: 'url("' + value.theme + '")'
             })
         });
-        getRecord(props.location.state.id).then(function (value) {
+        getRecord(props.match.params.id).then(function (value) {
             {/*getting visited record from server. */
             }
             setRecord(value)
@@ -72,16 +72,12 @@ function Page(props) {
         <>
             <Router>
                 <div style={background}>
-                    <SideMenu/>
+                    <SideMenu url={props.match.url}/>
                     {details.Music != null &&
                     <MusicPlayer icon={details.Music_icon} music={details.Music}/>
                     }
                     <Switch>
-                        <Route exact path="/Page">
-                            a
-                            <Portrait src={details.portrait} position={details.portrait_position}/>
-                        </Route>
-                        <Route path="/portfolio">
+                        <Route path={`${props.match.url}/portfolio`}>
                             <Portfolio name={details.first_name + ' ' + details.last_name}
                                        birthday={birthday}
                                        lifeProfile={details.life_profile}
@@ -91,13 +87,18 @@ function Page(props) {
                                        gender={details.gender}
                                        portrait={details.portrait}/>
                         </Route>
-                        <Route path="/guestbook">
-                            <Guestbook pageID={props.location.state.id}/>
+                        <Route path={`${props.match.url}/guestbook`}>
+                            <Guestbook pageID={props.match.params.id}/>
+                        </Route>
+                        <Route path={`${props.match.url}`}>
+                            a
+                            <Portrait src={details.portrait} position={details.portrait_position}/>
                         </Route>
                     </Switch>
                 </div>
                 <Tombstone name={details.first_name + ' ' + details.last_name} birthday={birthday} deathday={deathday}
-                           record={record} flowerBase={details.flower_url_base} pageId={props.location.state.id} refresh={refresh}/>
+                           record={record} flowerBase={details.flower_url_base} pageId={props.match.params.id}
+                           refresh={refresh}/>
             </Router>
         </>
     )

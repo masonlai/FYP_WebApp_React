@@ -6,19 +6,20 @@ pageIndex is using for show all matching record of key from input of header
 import React, {useContext, useState, useEffect} from "react";
 import {Media, Row, Col, Pagination, PaginationItem, PaginationLink} from "reactstrap";
 import {getPageIndex} from "../../assets/apiManager/apiManager";
-import {BackgroundContext} from '../../views/Index'
+import {BackgroundContext} from '../Indexpage'
 import '../../assets/scss/paper-kit/cards/pageIndex.scss'
 import {useLocation, withRouter} from "react-router-dom";
 
 function PageIndex(props) {
     const location = useLocation();
-    const key = props.location.state.key;
-    const [page, setPage] = useState(props.location.state.page);
+    const key = props.match.params.key;
+    const [page, setPage] = useState(props.match.params.page);
     const theme = useContext(BackgroundContext);
     const [index, setIndex] = useState('');
     const [rows, setRows] = useState('');
     useEffect(() => {
-        getPageIndex(key, page).then(function (value) {
+        getPageIndex(key, page).
+        then(function (value) {
             setIndex(value);
             {/*if no matching page, return to index*/}
             if (typeof value.one === "undefined") {
@@ -34,15 +35,15 @@ function PageIndex(props) {
                     setRows(<Pagination>
                         <PaginationItem active>
 
-                            <PaginationLink href="#" onClick={handlePage} value={page}>
-                                {page}
+                            <PaginationLink href="#" onClick={handlePage} value={parseInt(page, 10)}>
+                                {parseInt(page, 10)}
                             </PaginationLink>
 
                         </PaginationItem>
 
                         <PaginationItem>
-                            <PaginationLink href="#" onClick={handlePage} value={page + 1}>
-                                {page + 1}
+                            <PaginationLink href="#" onClick={handlePage} value={parseInt(page, 10) + 1}>
+                                {parseInt(page, 10) + 1}
                             </PaginationLink>
                         </PaginationItem></Pagination>);
                 }
@@ -111,10 +112,7 @@ function PageIndex(props) {
     };
     const handleEnter = (e) => {
         props.history.push({
-            pathname: "Page",
-            state: {
-                id: e.currentTarget.getAttribute('value'),
-            }
+            pathname: "/Page/"+e.currentTarget.getAttribute('value'),
         })
     };
     return (

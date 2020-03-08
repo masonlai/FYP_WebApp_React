@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import CropperModal from '../Modal/CropperThemeModal'
+import CropperModal from '../Modal/CropperThemeModal.jsx'
 import {Button, Card, Form, Input, Container, Row, Col, Label} from "reactstrap";
 import '../../assets/scss/paper-kit/cards/CropperModal.scss'
 

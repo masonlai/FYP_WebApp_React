@@ -20,7 +20,8 @@ import {
 import '../../assets/scss/paper-kit/cards/page.scss'
 import {getComments} from '../../assets/apiManager/apiManager'
 import {postComments} from '../../assets/apiManager/apiManager'
-import {AuthContext} from "../Index";
+import {AuthContext} from "../Indexpage";
+import Cookies from 'universal-cookie';
 
 
 function Guestbook(porps) {
@@ -30,6 +31,7 @@ function Guestbook(porps) {
     const [rows, setRows] = useState('');
     const [page, setPage] = useState(1);
     const [Descending, setDescending] = useState(true);
+    const cookies = new Cookies();
 
     useEffect(() => {
         {/* get the page's comment from backend*/
@@ -128,7 +130,7 @@ function Guestbook(porps) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postComments(AuthData.AuthData.access_token, porps.pageID, comment).then(function (value) {
+        postComments(cookies.get('user').access_token, porps.pageID, comment).then(function (value) {
             getComments(porps.pageID, 1).then(function (value) {
                 setComments(value)
             })
@@ -169,7 +171,7 @@ function Guestbook(porps) {
                             })}
                             </tbody>
                         </Table>
-                        {AuthData.AuthData.access_token ?
+                        {AuthData.AuthData ?
                             <Form onSubmit={handleSubmit}>
                                 <FormGroup>
                                     <Label for="lifeProfile">Comment Box</Label>

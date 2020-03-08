@@ -1,5 +1,5 @@
 import React, {createContext} from "react";
-import AuthContext from '../../views/Index'
+import AuthContext from '../../views/Indexpage'
 import classnames from "classnames";
 
 import {
@@ -12,7 +12,7 @@ import {
     Container,
 } from "reactstrap";
 
-import LoginModal from "components/Modal/LoginModal.js";
+import LoginModal from "../Modal/LoginModal.js";
 import {
     Link,
     withRouter,
@@ -54,7 +54,7 @@ function IndexNavbar() {
                         <NavbarBrand
                             style={{fontSize: '30px', border: 'ridge', padding: '5px', marginLeft: '15px'}}
                             data-placement="bottom"
-                            href="/index"
+                            href="/"
                             target="_blank"
                             title="Coded by MasonLai"
                         >

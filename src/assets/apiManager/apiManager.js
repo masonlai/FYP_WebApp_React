@@ -3,9 +3,8 @@ import fetch from 'isomorphic-fetch';
 import theme from '../img/a.jpg'
 /* http://masonlai123.pythonanywhere.com/*/
 let postApi = (path) => {
-    return 'http://127.0.0.1:5000' + path;
+    return 'http://masonlai123.pythonanywhere.com/' + path;
 };
-
 
 export const Login = async (username, password) => {
     const formdata = new FormData();
@@ -20,7 +19,6 @@ export const Login = async (username, password) => {
         const fetchResponse = await fetch(postApi('/login'), settings);
         const data = await fetchResponse.json();
         return data
-
     } catch (e) {
         return e;
     }

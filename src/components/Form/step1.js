@@ -1,5 +1,5 @@
 import React, {useState, useContext} from "react";
-import {BackgroundContext} from '../../views/Index'
+import {BackgroundContext} from '../../views/Indexpage'
 import {withRouter, useHistory} from "react-router-dom";
 import {
     Button,
@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import UploadImg from '../../components/Form/UploadImg'
 import ReactDatetime from "react-datetime";
-
+import Cookies from 'universal-cookie';
 function Step1(props) {
     let history = useHistory();
     const theme = useContext(BackgroundContext);
@@ -26,6 +26,14 @@ function Step1(props) {
     const [imageUrl, setImageUrl] = useState('');
     const [lifeProfile, setLifeProfile] = useState('');
     const [error, setError] = useState(false);
+    const cookies = new Cookies();
+
+    React.useEffect(() => {
+        if(cookies.get('user')==null){
+           props.history.push({
+                pathname: "index"})
+        }
+    })
 
     const callback = (hooksResultImgUrl) => {
         setImageUrl(hooksResultImgUrl)
@@ -38,8 +46,8 @@ function Step1(props) {
             props.history.push({
                 pathname: "createPageStep2",
                 state: {
-                    dateOfBirth: dateOfBirth,
-                    dateOfDeath: dateOfDeath,
+                    dateOfBirth: dateOfBirth.date._d,
+                    dateOfDeath: dateOfDeath.date._d,
                     fistName: fistName,
                     lastName: lastName,
                     gender: gender,
@@ -52,14 +60,10 @@ function Step1(props) {
         }
 
     };
-    const dateOfBirthChange = () => {
-        const date = new Date();
-        setDateOfBirth(date)
-    };
-    const dateOfDeathChange = () => {
-        const date = new Date();
-        setDateOfDeath(date)
-    };
+    const dateOfBirthChange = date => setDateOfBirth({ date })
+    const dateOfDeathChange = date => setDateOfDeath({ date })
+
+
     const fistNameChange = (e) => {
         const {value} = e.target;
         setFistName(value);

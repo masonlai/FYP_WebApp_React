@@ -1,7 +1,7 @@
-import React, {useContext, useState} from "react";
-import {AuthContext} from '../../views/Index'
+import React, {useContext, useState, useRef} from "react";
+import {AuthContext} from '../../views/Indexpage'
 import {Login} from '../../assets/apiManager/apiManager'
-
+import SignUpModal from './SignUpModal'
 import {
     Button,
     InputGroupAddon,
@@ -14,12 +14,13 @@ import {
     Spinner,
     Input,
     NavItem,
-    NavLink, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem,
+    NavLink, DropdownToggle, DropdownMenu, DropdownItem,
     UncontrolledDropdown
 } from "reactstrap";
 import {Link, useLocation} from "react-router-dom";
 import {MobileContext} from '../Navbars/IndexNavbar'
 import getWindowWidth from "../../assets/apiManager/getWindowWidth";
+import Cookies from 'universal-cookie';
 
 function LoginModal(props) {
     const {toggleNavbarCollapse} = useContext(MobileContext);
@@ -29,10 +30,13 @@ function LoginModal(props) {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const {toggleAuth} = useContext(AuthContext);
-    const [dropdownOpen, setOpen] = useState(false);
+    const {logout} = useContext(AuthContext);
     const {height, width} = getWindowWidth();
-
-    const toggle = () => setOpen(!dropdownOpen);
+    const childRef = useRef();
+    const openSignup = () => {
+        childRef.current.openSignup();
+    }
+    const cookies = new Cookies();
     const toggleModal = () => {
         setModal(!modal);
         toggleNavbarCollapse()
@@ -59,7 +63,7 @@ function LoginModal(props) {
     };
 
     const logoutHandler = () => {
-        toggleAuth('');
+        logout()
         setModal(!modal);
     };
 
@@ -75,27 +79,26 @@ function LoginModal(props) {
 
     return (
         <>
-            {auth.AuthData.username ?
+            {auth.AuthData == true ?
                 <NavItem>
-                <UncontrolledDropdown setActiveFromChild>
-                    <DropdownToggle tag="a" className="nav-link" caret
-                                    style={location.pathname != '/index' || width < 575.98 ?
-                                        {color: '#403D39', 'font-weight': '600'} :
-                                        {color: '#FFFFFF', 'font-weight': '600'}}>{auth.AuthData.username}
-                    </DropdownToggle>
-                    <DropdownMenu>
-                        <Link to="/craetePage"><DropdownItem>Create a webpage</DropdownItem></Link>
-                        <DropdownItem>Edit webpages</DropdownItem>
-                        <DropdownItem onClick={logoutHandler}>Logout</DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledDropdown>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret
+                                        style={location.pathname != '/index' || width < 575.98 ?
+                                            {color: '#403D39', 'font-weight': '600'} :
+                                            {color: '#FFFFFF', 'font-weight': '600'}}>{cookies.get('user').username}
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <Link to="/craetePage"><DropdownItem>Create a webpage</DropdownItem></Link>
+                            <DropdownItem>Edit webpages</DropdownItem>
+                            <DropdownItem onClick={logoutHandler}>Logout</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>
                 </NavItem>
                 : <NavItem>
                     <NavLink
                         data-placement="bottom"
                         target="_blank"
                     >
-
 
                         <a href="javascript:void(0);" onClick={toggleModal}
                            style={location.pathname != '/index' || width < 575.98 ?
@@ -172,11 +175,11 @@ function LoginModal(props) {
                                     <Button
                                         className="btn-link"
                                         color="primary"
-                                        href="#pablo"
-                                        onClick={toggleModal}
+                                        onClick={openSignup}
                                     >
                                         No account? Click the Register now!
                                     </Button>
+                                    <SignUpModal ChildComp ref={childRef}/>
                                 </div>
                             </Col>
                         </Row>

@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
-import {AuthContext} from '../../views/Index'
-import {BackgroundContext} from '../../views/Index'
+import {AuthContext} from '../../views/Indexpage'
+import {BackgroundContext} from '../../views/Indexpage'
 import {useLocation, withRouter} from "react-router-dom";
 
 import {
@@ -15,6 +15,7 @@ import {
 } from "reactstrap";
 import {CreatePage} from "../../assets/apiManager/apiManager";
 import UploadTheme from "./UploadTheme";
+import Cookies from "universal-cookie";
 
 function Step2(props) {
     const AuthData = useContext(AuthContext);
@@ -26,7 +27,14 @@ function Step2(props) {
     const [personalTheme, setPersonalTheme] = useState(null);
     const [backgroundMusic, setBackgroundMusic] = useState(null);
     const [loading, setLoading] = useState(false);
-
+    const cookies = new Cookies();
+    React.useEffect(() => {
+        if (props.location.state == null) {
+            props.history.push({
+                pathname: "index"
+            })
+        }
+    })
     const callback = (hooksResultImgUrl) => {
         setPersonalTheme(hooksResultImgUrl)
     };
@@ -37,7 +45,7 @@ function Step2(props) {
             setPageTheme('')
         }
         let result = CreatePage(
-            AuthData.AuthData.access_token,
+            cookies.get('user').access_token,
             props.location.state.dateOfBirth,
             props.location.state.dateOfDeath,
             props.location.state.fistName,
@@ -55,17 +63,11 @@ function Step2(props) {
             const resolve = Promise.resolve(result);
             resolve.then(function (value) {
                 props.history.push({
-                    pathname: "Page",
-                    state: {
-                        id: value.id
-                    }
+                    pathname: "Page/"+value.id,
                 })
-
             })
         }
-
     };
-
     const musicChange = e => {
         setBackgroundMusic(e.target.files[0])
     };
@@ -95,7 +97,6 @@ function Step2(props) {
                                 <Col className='d-flex justify-content-center'>
                                     <div className="cc-selector">
                                         <div className='mt-2'>
-
                                             <input id="leftTheme" type="radio" name="theme-position" value="leftTheme"
                                                    onChange={positionChange}/>
                                             <label className="drinkcard-cc leftTheme" htmlFor="leftTheme"></label>
@@ -140,13 +141,15 @@ function Step2(props) {
                             <UploadTheme parentCallback={callback}/>
                             <FormGroup>
                                 <Label for="exampleFile">Upload background music (mp3 file)</Label>
-                                <Input type="file" name="file" id="exampleFile" accept=".mp3,audio/*" onChange={musicChange}/>
+                                <Input type="file" name="file" id="exampleFile" accept=".mp3,audio/*"
+                                       onChange={musicChange}/>
                                 <FormText color="muted">
                                     Background music will be played when guests are Surfing the website.
                                 </FormText>
                             </FormGroup>
 
-                            <Button block className='mb-4'>{loading ? <Spinner animation="border" variant="light"/> : 'Submit'}</Button>
+                            <Button block className='mb-4'>{loading ?
+                                <Spinner animation="border" variant="light"/> : 'Submit'}</Button>
                         </Form>
                     </div>
                 </div>

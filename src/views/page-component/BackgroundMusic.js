@@ -10,7 +10,6 @@ function MusicPlayer(porps) {
             musicSrc: porps.music,
         }
     ];
-    console.log(porps.music);
 
     const options = {
         audioLists: audioList1,

@@ -12,11 +12,14 @@ import {
     Container, Row, Spinner
 } from "reactstrap";
 import {visitRecord} from "../../assets/apiManager/apiManager"
-import {AuthContext} from "../Index";
+import {AuthContext} from "../Indexpage";
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import tombstoneimage from '../../assets/img/tombstone.png'
+import Cookies from 'universal-cookie';
 
 function Tombstone(props) {
+    const cookies = new Cookies();
     const auth = useContext(AuthContext);
     const split = (string) => {
         return string.split(" ")
@@ -33,8 +36,8 @@ function Tombstone(props) {
     };
     const submitFlower = () => {
         setLoading(true);
-        if (auth.AuthData.access_token) {
-            visitRecord(props.pageId, auth.AuthData.access_token, flower).then(function (value) {
+        if (cookies.get('user').access_token) {
+            visitRecord(props.pageId, cookies.get('user').access_token, flower).then(function (value) {
                 props.refresh(props.pageId)
             })
         }
@@ -48,7 +51,7 @@ function Tombstone(props) {
         <> <Container>
             <div name='test1' className='rounded mx-auto d-block tombstoneBackGround' style={{
                 backgroundImage:
-                    "url(" + require("assets/img/tombstone.png") + ")"
+                    "url(" + tombstoneimage + ")"
             }}>
                 <text style={{color: 'white'}}>a</text>
                 <div className='font'>{props.name}</div>
@@ -86,7 +89,7 @@ function Tombstone(props) {
 
             </div>
 
-            {auth.AuthData.access_token && <div className='col-12'>
+            {auth.AuthData == true && <div className='col-12'>
                 <Button block outline color="info" onClick={toggle_collapse}
                         style={{marginBottom: '1rem'}} size="lg">Floral Tributes</Button>
                 <Collapse isOpen={isOpen}>

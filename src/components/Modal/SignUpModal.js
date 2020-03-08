@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useState, useImperativeHandle, forwardRef} from "react";
 import {
     Button,
     Col,
@@ -12,12 +12,13 @@ import {
     Row,
     Spinner
 } from "reactstrap";
-import {AuthContext} from '../../views/Index';
+import {AuthContext} from '../../views/Indexpage';
 import {Signup} from "../../assets/apiManager/apiManager";
 import {Link} from "react-router-dom";
 
 
-function SignUpModal({fromLogin = false}) {
+
+function SignUpModal({fromLogin = false}, ref) {
     const [modal, setModal] = React.useState(false);
     const auth = useContext(AuthContext);
     const toggleModal = () => {
@@ -33,6 +34,7 @@ function SignUpModal({fromLogin = false}) {
     const [religion, setReligion] = useState('');
     const [error, setError] = useState('');
     const {toggleAuth} = useContext(AuthContext);
+
     const mySubmitHandler = (data) => {
         data.preventDefault();
         setLoading(true);
@@ -40,12 +42,10 @@ function SignUpModal({fromLogin = false}) {
             toggleAuth(value);
             if (value.access_token) {
                 setError('');
-                console.log(value);
                 setLoading(false)
             } else {
                 setLoading(false);
                 setError(value.message)
-
             }
 
         });
@@ -66,14 +66,16 @@ function SignUpModal({fromLogin = false}) {
         const {value} = e.target;
         setReligion(value);
     };
+    useImperativeHandle(ref, () => ({
+        openSignup: (newVal) => {
+            toggleModal()
+        }
+    }));
     return (
         <>
-            <Button color="primary" block outline type="button" className="mr-1" size="lg" onClick={toggleModal}>
-                Register
-            </Button>
             {/* Modal */}
             <Modal isOpen={modal} toggle={toggleModal}>
-                {auth.AuthData.username ?
+                {auth.AuthData == true ?
                     <div>
                         <div className="modal-header">
                             <button
@@ -88,7 +90,7 @@ function SignUpModal({fromLogin = false}) {
                                 className="modal-title text-center"
                                 id="exampleModalLabel"
                             >
-                                Welcome {auth.AuthData.username}
+                                Welcome
                             </h5>
                         </div>
                         <div className="modal-body">
@@ -108,9 +110,9 @@ function SignUpModal({fromLogin = false}) {
                             <div className="divider"/>
                             <div className="right-side">
                                 <Link to='/craetePage'>
-                                <Button className="btn-link" color="danger" type="button">
-                                   Go
-                                </Button>
+                                    <Button className="btn-link" color="danger" type="button">
+                                        Go
+                                    </Button>
                                 </Link>
                             </div>
                         </div>
@@ -220,4 +222,5 @@ function SignUpModal({fromLogin = false}) {
     )
 }
 
+SignUpModal = forwardRef(SignUpModal)
 export default SignUpModal;
