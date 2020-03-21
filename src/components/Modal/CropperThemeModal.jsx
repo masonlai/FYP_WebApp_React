@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Cropper from 'react-cropper'
 import 'cropperjs/dist/cropper.css'
-import {Button, Card, Form, Input, Container, Row, Col, Label} from "reactstrap";
+import {Button, Col,} from "reactstrap";
 import '../../assets/scss/paper-kit/cards/CropperModal.scss'
 
 function HooksCropperModal({uploadedImageFile, onClose, onSubmit}) {
@@ -34,34 +34,35 @@ function HooksCropperModal({uploadedImageFile, onClose, onSubmit}) {
     };
 
     return (
-    <div className="hooks-cropper-modal" style={{zIndex:'50'}}>
-      <div className="modal-panel">
-        <div className="cropper-container-container">
-          <div className="cropper-container">
-            <Cropper
-              src={src}
-              className="cropper"
-              ref={cropperRef}
-              viewMode={1}
-              zoomable={false}
-              aspectRatio={1.7}
-              guides={false}
-              preview=".cropper-preview"
-            />
-          </div>
-            <Col className='d-none d-sm-block'>
-          <div className="preview-container">
-            <div className="cropper-preview" />
-          </div></Col>
+        <div className="hooks-cropper-modal" style={{zIndex: '50'}}>
+            <div className="modal-panel">
+                <div className="cropper-container-container">
+                    <div className="cropper-container">
+                        <Cropper
+                            src={src}
+                            className="cropper"
+                            ref={cropperRef}
+                            viewMode={1}
+                            zoomable={false}
+                            aspectRatio={1.7}
+                            guides={false}
+                            preview=".cropper-preview"
+                        />
+                    </div>
+                    <Col className='d-none d-sm-block'>
+                        <div className="preview-container">
+                            <div className="cropper-preview"/>
+                        </div>
+                    </Col>
+                </div>
+                <div className="button-row mt-2">
+                    <div style={{paddingRight: '3vh'}}>
+                        <Button outline color="danger" onClick={close}>Cancel</Button></div>
+                    <div style={{paddingLeft: '3vh'}}>
+                        <Button outline color="success" onClick={handleSubmit}>Submite</Button></div>
+                </div>
+            </div>
         </div>
-        <div className="button-row mt-2">
-            <div style={{paddingRight:'3vh'}}>
-                <Button outline color="danger" onClick={close}>Cancel</Button></div>
-            <div style={{paddingLeft:'3vh'}}>
-                <Button outline color="success" onClick={handleSubmit}>Submite</Button></div>
-        </div>
-      </div>
-    </div>
     )
 }
 

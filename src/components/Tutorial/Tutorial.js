@@ -35,6 +35,10 @@ function Tutorial() {
                             <hr/>
                             Customize page:
                             <ResponsiveEmbed src='https://www.youtube.com/embed/_b6lpB9yVng' allowFullScreen/>
+                            <br/>
+                            <hr/>
+                            Worship:
+                            <ResponsiveEmbed src='https://www.youtube.com/embed/pW6VLncd9do' allowFullScreen/>
                         </Container>
                         <div style={{marginBottom: '5vh'}}/>
                     </div>

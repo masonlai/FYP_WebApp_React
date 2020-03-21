@@ -8,8 +8,7 @@ import React from "react";
 function Portrait(props) {
 
     return (
-        <>
-
+        <>>
             <div className={'frame-bigger'+' '+props.position+'-page'}>
                 <img className='portrait' src={props.src}/>
             </div>

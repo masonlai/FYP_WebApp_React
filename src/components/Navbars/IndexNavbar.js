@@ -18,7 +18,7 @@ import {
     withRouter,
     useLocation
 } from "react-router-dom";
-import getWindowWidth from "../../assets/apiManager/getWindowWidth";
+import getWindowWidth from "../apiManager/getWindowWidth";
 
 export const MobileContext = createContext();
 
@@ -33,6 +33,7 @@ function IndexNavbar() {
         return [_state, setState]
     };
     let [navbarColor, setNavbarColor] = [];
+    //getting width of device for response application
     const {height, width} = getWindowWidth();
     const location = useLocation();
     if (location.pathname != '/index') {
@@ -48,19 +49,19 @@ function IndexNavbar() {
     };
     return (
         <MobileContext.Provider value={{navbarCollapse, toggleNavbarCollapse: toggleNavbarCollapse}}>
-            <Navbar className={classnames("fixed-top", navbarColor)} expand="lg" style={{zIndex:998}}>
+            <Navbar className={classnames("fixed-top", navbarColor)} expand="lg" style={{zIndex: 998}}>
                 <Container>
                     <div className="navbar-translate">
-                        <NavbarBrand
-                            style={{fontSize: '30px', border: 'ridge', padding: '5px', marginLeft: '15px'}}
-                            data-placement="bottom"
-                            href="/"
-                            target="_blank"
-                            title="Coded by MasonLai"
-                        >
-                            R.I.P
-                        </NavbarBrand>
+                        <Link to="/index">
+                            <NavbarBrand
+                                style={{fontSize: '30px', border: 'ridge', padding: '5px', marginLeft: '15px'}}
+                                data-placement="bottom"
 
+                                target="_blank"
+                                title="Coded by MasonLai"
+                            >
+                                R.I.P
+                            </NavbarBrand></Link>
                         <button
                             id='mobile-button'
                             aria-expanded={navbarCollapse}

@@ -1,16 +1,15 @@
 {
-  "name": "react-router-webpack-example-app",
+  "name": "FYP_frontEnnd",
   "version": "1.2.0",
-  "description": "Example using react, react-router webpack and styled components",
+  "description": "my final year project of frontend side",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StevenIseki/react-router-webpack-example"
+    "url": "https://github.com/masonlai/FYP_frontEnd.git"
   },
-  "author": "Steven Iseki <stevenisekimartin@gmail.com>",
+  "author": "Mason Lai <my_email@masonlai.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --port 3000 --inline --hot",
-    "test": "babel-tape-runner test/*.js",
     "build": "webpack"
   },
   "devDependencies": {
@@ -52,6 +51,10 @@
     "react-cookie": "^4.0.3",
     "react-cropper": "^1.3.0",
     "react-datetime": "^2.16.3",
+    "react-dropzone": "^10.2.1",
+    "react-dropzone-component": "^3.2.0",
+    "react-image-gallery": "^1.0.6",
+    "react-images": "^1.1.0",
     "react-jinke-music-player": "^4.10.0",
     "react-responsive-embed": "^2.1.0",
     "react-scroll": "^1.7.16",

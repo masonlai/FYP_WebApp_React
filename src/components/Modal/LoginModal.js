@@ -1,6 +1,6 @@
 import React, {useContext, useState, useRef} from "react";
 import {AuthContext} from '../../views/Indexpage'
-import {Login} from '../../assets/apiManager/apiManager'
+import {Login} from '../apiManager/apiManager'
 import SignUpModal from './SignUpModal'
 import {
     Button,
@@ -19,7 +19,7 @@ import {
 } from "reactstrap";
 import {Link, useLocation} from "react-router-dom";
 import {MobileContext} from '../Navbars/IndexNavbar'
-import getWindowWidth from "../../assets/apiManager/getWindowWidth";
+import getWindowWidth from "../apiManager/getWindowWidth";
 import Cookies from 'universal-cookie';
 
 function LoginModal(props) {
@@ -35,7 +35,7 @@ function LoginModal(props) {
     const childRef = useRef();
     const openSignup = () => {
         childRef.current.openSignup();
-    }
+    };
     const cookies = new Cookies();
     const toggleModal = () => {
         setModal(!modal);
@@ -47,8 +47,8 @@ function LoginModal(props) {
         data.preventDefault();
         setLoading(true);
         Login(username, password).then(function (value) {
-            toggleAuth(value);
             if (value.access_token) {
+                toggleAuth(value);
                 toggleNavbarCollapse();
                 setModal(!modal);
                 setError('');
@@ -63,7 +63,7 @@ function LoginModal(props) {
     };
 
     const logoutHandler = () => {
-        logout()
+        logout();
         setModal(!modal);
     };
 

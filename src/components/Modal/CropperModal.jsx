@@ -3,35 +3,35 @@ import PropTypes from 'prop-types'
 
 import Cropper from 'react-cropper'
 import 'cropperjs/dist/cropper.css'
-import {Button, Card, Form, Input, Container, Row, Col, Label} from "reactstrap";
+import {Button, Col} from "reactstrap";
 import '../../assets/scss/paper-kit/cards/CropperModal.scss'
 
 function HooksCropperModal({uploadedImageFile, onClose, onSubmit}) {
-    const [src, setSrc] = useState(null)
-    const cropperRef = useRef(null)
+    const [src, setSrc] = useState(null);
+    const cropperRef = useRef(null);
 
     useEffect(() => {
-        const fileReader = new FileReader()
+        const fileReader = new FileReader();
         fileReader.onload = e => {
-            const dataURL = e.target.result
+            const dataURL = e.target.result;
             setSrc(dataURL)
-        }
+        };
 
         fileReader.readAsDataURL(uploadedImageFile)
-    }, [uploadedImageFile])
+    }, [uploadedImageFile]);
 
     const handleSubmit = useCallback(() => {
         // let filename = uploadedImageFile.name
 
-        console.log('Uploading')
+        console.log('Uploading');
         cropperRef.current.getCroppedCanvas().toBlob(async blob => {
-            onSubmit(blob)
+            onSubmit(blob);
             onClose()
         })
-    }, [onClose, onSubmit])
+    }, [onClose, onSubmit]);
     const close = () => {
         onClose()
-    }
+    };
 
     return (
     <div className="hooks-cropper-modal" style={{zIndex:'50'}}>
@@ -69,6 +69,6 @@ HooksCropperModal.propTypes = {
     uploadedImageFile: PropTypes.object.isRequired,
     onClose: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired
-}
+};
 
 export default HooksCropperModal

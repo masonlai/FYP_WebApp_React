@@ -13,7 +13,7 @@ import {
     Spinner
 } from "reactstrap";
 import {AuthContext} from '../../views/Indexpage';
-import {Signup} from "../../assets/apiManager/apiManager";
+import {Signup} from "../apiManager/apiManager";
 import {Link} from "react-router-dom";
 
 
@@ -222,5 +222,5 @@ function SignUpModal({fromLogin = false}, ref) {
     )
 }
 
-SignUpModal = forwardRef(SignUpModal)
+SignUpModal = forwardRef(SignUpModal);
 export default SignUpModal;

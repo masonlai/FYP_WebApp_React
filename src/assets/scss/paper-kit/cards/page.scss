@@ -170,8 +170,9 @@
     left: 10%;
     margin-top: 20%;
     margin-bottom: 17%;
-    opacity: 0.9;
+    opacity: 0.95;
     font-size: 0.6em;
+    z-index: 70;
   }
   p {
     display: none
@@ -193,7 +194,8 @@
     left: 20%;
     margin-top: 8%;
     margin-bottom: 4%;
-    opacity: 0.9;
+    opacity: 0.95;
+    z-index: 70;
 
     p {
       margin-left: 27%;
@@ -246,15 +248,15 @@
 
 @media only screen and (min-width: 575.99px) {
   .flower {
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
     background-color: transparent;
     display: block;
   }
-  .divFlower {
-    text-align: center;
-    font-family: 'Zhi Mang Xing', cursive;
-    font-size: 1.5em;
+  .selected {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
   }
 }
 

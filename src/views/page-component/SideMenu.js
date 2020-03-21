@@ -9,7 +9,7 @@ import SlidingPanel from "react-sliding-side-panel";
 import {
     Link
 } from "react-router-dom";
-import getWindowWidth from "../../assets/apiManager/getWindowWidth";
+import getWindowWidth from "../../components/apiManager/getWindowWidth";
 
 const SideMenu = (props) => {
     const [openPanel, setOpenPanel] = useState(false);
@@ -31,7 +31,7 @@ const SideMenu = (props) => {
         borderBottomRightRadius: 10,
         borderBottomLeftRadius: 0,
         borderTopLeftRadius: 0,
-    }
+    };
 
     return (
         <>

@@ -28,7 +28,7 @@ function IndexHeader(props) {
     const childRef = useRef();
     const openSignup = () => {
         childRef.current.openSignup();
-    }
+    };
     const location = useLocation();
     if (location.pathname != '/index') {
         props.history.push('/index');
@@ -41,7 +41,6 @@ function IndexHeader(props) {
                 pathname: "PageIndex/"+search+'/'+1,
             })
         }
-
     };
 
     return (
@@ -74,7 +73,7 @@ function IndexHeader(props) {
                             </div>
                         </div>
                         <h2 className="presentation-subtitle text-center">
-                            {typeof props.location.state != 'undefined' &&
+                            {props.location.state &&
                             <Alert color="danger">
                                 No matching page!
                             </Alert>

@@ -9,14 +9,19 @@ import {
     CardBody, Card, Dropdown,
     DropdownToggle, DropdownMenu,
     DropdownItem,
-    Container, Row, Spinner
+    Container, Row,
+    Spinner, Table,
+    Col, Tooltip
 } from "reactstrap";
-import {visitRecord} from "../../assets/apiManager/apiManager"
+import {visitRecord} from "../../components/apiManager/apiManager"
 import {AuthContext} from "../Indexpage";
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {Link} from 'react-scroll'
 import tombstoneimage from '../../assets/img/tombstone.png'
 import Cookies from 'universal-cookie';
+import censerOn from '../../assets/img/censerOn.png'
+import censerOff from '../../assets/img/censerOff.png'
+import getWindowWidth from "../../components/apiManager/getWindowWidth";
+
 
 function Tombstone(props) {
     const cookies = new Cookies();
@@ -24,16 +29,21 @@ function Tombstone(props) {
     const split = (string) => {
         return string.split(" ")
     };
+    const {height, width} = getWindowWidth();
     const [isOpen, setIsOpen] = useState(false);
     const [flower, setFlower] = useState('');
-    const toggle_collapse = () => setIsOpen(!isOpen);
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const toggle_dropdown = () => setDropdownOpen(prevState => !prevState);
     const [loading, setLoading] = useState(false);
+    const [tooltipOpen, setTooltipOpen] = useState(false);
+
+    const toggle = () => setTooltipOpen(!tooltipOpen);
+    const toggle_collapse = () => setIsOpen(!isOpen);
+    const toggle_dropdown = () => setDropdownOpen(prevState => !prevState);
 
     const flowerController = (e) => {
         setFlower(e.target.name);
     };
+
     const submitFlower = () => {
         setLoading(true);
         if (cookies.get('user').access_token) {
@@ -44,11 +54,52 @@ function Tombstone(props) {
 
         setLoading(false)
 
-
     };
+    let flowerRow = [];
+
+
+    const [censer, setCenser] = useState(censerOff);
+    const censerChange = () => {
+        setCenser(censerOn)
+    };
+    const [isOpenVister, setIsOpenVister] = useState(false);
+
+    const toggleVister = () => setIsOpenVister(!isOpenVister);
+    let lenFlower = Object.keys(props.record).length;
+
+    for (let i = 0; i < lenFlower && i < 15; i++) {
+        let flowerNum = i;
+        let flowerTop = 0;
+        //make different height of flower
+        if (i % 2 == 0) {
+            flowerTop = 5
+        } else {
+            flowerTop = 0
+        }
+        if (width < 575.98) {
+            flowerRow.push(<div className='divFlower' style={{
+                marginTop: flowerTop + 'vh',
+                marginLeft: i * 3 + 'vh',
+                position: 'absolute',
+                zIndex: 50
+            }}>
+                <img className='flower' src={props.record[flowerNum].flower_url}/>
+            </div>)
+        } else {
+            flowerRow.push(<div className='divFlower' style={{
+                marginTop: flowerTop + 'vh',
+                marginLeft: i * 5 + 'vh',
+                position: 'absolute',
+                zIndex: 50
+            }}>
+                <img className='flower' src={props.record[flowerNum].flower_url}/>
+            </div>)
+        }
+    }
+
 
     return (
-        <> <Container>
+        <> <Container style={{marginBottom: '60vh'}}>
             <div name='test1' className='rounded mx-auto d-block tombstoneBackGround' style={{
                 backgroundImage:
                     "url(" + tombstoneimage + ")"
@@ -60,26 +111,81 @@ function Tombstone(props) {
                 <div className='date'>{props.deathday}</div>
                 <Row className='moblie'>
                     {/* If some people visited this page */}
-                    {props.record.one &&
-                    <div className='divFlower'><img className='flower'
-                                                    src={props.record.one.flower_url}/>{props.record.one.username}<br/>
-                        {split(props.record.one.date)[1] + ' ' + split(props.record.one.date)[2] + ' ' + split(props.record.one.date)[3]}
+                    {flowerRow}
+
+                    {/* Click for burn incense*/}
+                    <Col className='d-flex justify-content-center'>
+                        <img style={{zIndex: '51'}} src={censer} onClick={censerChange} id="TooltipExample"/>
+                        <Tooltip placement="right" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
+                            One click to burn incense sticks
+                        </Tooltip>
+                    </Col>
+
+                    {auth.AuthData == true && <div className='col-12'>
+                        <Button block outline color="info" onClick={toggle_collapse}
+                                style={{marginBottom: '1rem'}} size="lg">Floral Tributes</Button>
+                        <Collapse isOpen={isOpen}>
+                            <Card>
+                                <CardBody>
+
+                                    <Dropdown isOpen={dropdownOpen} toggle={toggle_dropdown} onClick={flowerController}>
+                                        <DropdownToggle caret color="info" outline>
+                                            Flower Type
+                                        </DropdownToggle>
+                                        <DropdownMenu>
+                                            <DropdownItem header style={{backgroundColor: '#e6f9ff'}}>Flower
+                                                type</DropdownItem>
+                                            {typeof props.flowersName !== "undefined"&&
+                                                props.flowersName.map(function (num) {
+                                                var name = num.split(".");
+                                                return <DropdownItem style={{backgroundColor: '#e6f9ff'}}
+                                                                     onClick={flowerController}
+                                                                     name={num}>{name[0]}</DropdownItem>
+                                            })}
+                                        </DropdownMenu>
+                                    </Dropdown>
+                                    {flower && <img src={props.flowerBase + flower}/>}
+                                    <br/>
+                                    {flower &&
+                                    <Link style={{color: 'inherit', textDecoration: 'inherit', fontWeight: 'bold'}}
+                                          activeClass="active" className="test1" to="test1" spy={true} smooth={true}
+                                          duration={500}>
+                                        <Button block color="info" size="lg"
+                                                outline onClick={submitFlower}>
+                                            {loading ? <Spinner animation="border"
+                                                                variant="light"/> : 'Rest In Peace'}</Button></Link>}
+                                </CardBody>
+                            </Card>
+                        </Collapse>
                     </div>}
-                    {props.record.two &&
-                    <div className='divFlower'><img className='flower'
-                                                    src={props.record.two.flower_url}/>{props.record.two.username}<br/>
-                        {split(props.record.two.date)[1] + ' ' + split(props.record.two.date)[2] + ' ' + split(props.record.two.date)[3]}
-                    </div>}
-                    {props.record.three &&
-                    <div className='divFlower'><img className='flower'
-                                                    src={props.record.three.flower_url}/>{props.record.three.username}<br/>
-                        {split(props.record.three.date)[1] + ' ' + split(props.record.three.date)[2] + ' ' + split(props.record.three.date)[3]}
-                    </div>}
-                    {props.record.four &&
-                    <div className='divFlower'><img className='flower'
-                                                    src={props.record.four.flower_url}/>{props.record.four.username}<br/>
-                        {split(props.record.four.date)[1] + ' ' + split(props.record.four.date)[2] + ' ' + split(props.record.four.date)[3]}
-                    </div>}
+                    {/*there is the list of all visitors.*/}
+                    <Button block outline color="primary" onClick={toggleVister}
+                            style={{marginTop: '4vh'}}>Visitors</Button>
+                    <Collapse isOpen={isOpenVister}>
+                        <Card style={{zIndex: '999'}}>
+                            <CardBody>
+                                <Table>
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Username</th>
+                                        <th>Date</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {Object.entries(props.record).map(([key, value]) => {
+                                        return <tr>
+                                            <th scope="row">{parseInt(key, 10) + 1}</th>
+                                            <td>{value.username}</td>
+                                            <td>{split(value.date)[1] + ' ' + split(value.date)[2] + ' ' + split(value.date)[3]}</td>
+                                        </tr>
+                                    })}
+
+                                    </tbody>
+                                </Table>
+                            </CardBody>
+                        </Card>
+                    </Collapse>
 
                 </Row>
 
@@ -88,38 +194,6 @@ function Tombstone(props) {
             <div className='flowerRow transparent'>
 
             </div>
-
-            {auth.AuthData == true && <div className='col-12'>
-                <Button block outline color="info" onClick={toggle_collapse}
-                        style={{marginBottom: '1rem'}} size="lg">Floral Tributes</Button>
-                <Collapse isOpen={isOpen}>
-                    <Card>
-                        <CardBody>
-
-                            <Dropdown isOpen={dropdownOpen} toggle={toggle_dropdown} onClick={flowerController}>
-                                <DropdownToggle caret color="info" outline>
-                                    Flower Type
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem header style={{backgroundColor:'#e6f9ff'}}>Flower type</DropdownItem>
-                                    <DropdownItem style={{backgroundColor:'#e6f9ff'}} onClick={flowerController} name='pink1.png'>Pink 1</DropdownItem>
-                                    <DropdownItem style={{backgroundColor:'#e6f9ff'}} onClick={flowerController} name='pink2.png'>Pink 2</DropdownItem>
-                                    <DropdownItem style={{backgroundColor:'#e6f9ff'}} onClick={flowerController} name='white1.png'>White</DropdownItem>
-                                    <DropdownItem style={{backgroundColor:'#e6f9ff'}} onClick={flowerController} name='red1.png'>Red</DropdownItem>
-
-                                </DropdownMenu>
-                            </Dropdown>
-                            {flower && <img src={props.flowerBase + flower}/>}
-                            <br/>
-                            {flower && <Link style={{ color: 'inherit', textDecoration: 'inherit', fontWeight:'bold'}}
-                                      activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >
-                                <Button block color="info" size="lg"
-                                               outline onClick={submitFlower}>
-                                {loading ? <Spinner animation="border" variant="light"/> : 'Rest In Peace'}</Button></Link>}
-                        </CardBody>
-                    </Card>
-                </Collapse>
-            </div>}
 
         </Container>
         </>

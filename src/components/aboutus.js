@@ -12,7 +12,8 @@ function Aboutus() {
                 <div className='container'>
                     <div className='createForm'>
                         <div style={{marginTop: '5vh'}}/>
-                        IDK what should i say
+                        The idea for RIP was first conceived when I need to create an application for
+                        my final year project.
                         <div style={{marginBottom: '6vh'}}/>
                     </div>
                 </div>
