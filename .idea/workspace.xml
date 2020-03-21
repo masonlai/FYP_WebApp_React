@@ -1,190 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="deleted node test">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/precache-manifest.dff24a6bf1b0a99b35d00dff848802dc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/2.423b2664.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/2.423b2664.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.181e9d11.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.181e9d11.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.c7dde021.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.c7dde021.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.57a2e8f0.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.57a2e8f0.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime~main.a8a9905a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime~main.a8a9905a.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/Theme1.49a2766b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/Theme2.dd8319d9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/Theme3.b3050f3e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/Theme4.155a58b4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/a.b10b01d5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/clouds.61c4e000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/flower1.586ec497.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/flower2.9e746d1b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/flower3.ce018c57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/flower4.81e3fcf3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/fog-low.7812184c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/full-bloom.c614347a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/nucleo-icons.d41d8cd9.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/nucleo-icons.d41d8cd9.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/nucleo-icons.d41d8cd9.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/nucleo-icons.d41d8cd9.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/tombstone.f3351daa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/antoine-barres.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/blurred-image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/bruno-abatti.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/creative-tim-white-slim2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/daniel-olahh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/daniel-olahs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/dasdas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/default-avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/eva.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/examples/landing-page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/examples/profile-page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/fabio-mangione.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/faces/ayo-ogunseinde-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/faces/clem-onojeghuo-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/faces/clem-onojeghuo-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/faces/erik-lucatero-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/faces/joe-gardner-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/faces/kaci-baum-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/federico-beccari.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/AU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/BE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/BF.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/BG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/BO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/BR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/CZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/DE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/DJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/DK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/DZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/EE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/EG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/ES.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/FI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/FR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/GA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/GB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/GM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/GT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/HN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/HT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/HU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/ID.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/IE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/IL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/IN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/IQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/IR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/IT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/JM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/JO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/JP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/KG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/KN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/KP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/KR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/KW.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/KZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/LA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/LB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/LC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/LS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/LU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/LV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/MG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/MK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/ML.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/MM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/MT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/MX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/NA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/NE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/NG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/NI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/NL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/NO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/OM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/PY.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/QA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/RO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/RU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/RW.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/SV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/TD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/TJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/TL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/TR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/TZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/UA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/US.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/VE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/VN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flags/YE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flower1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flower2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flower3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/flower4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/full-bloom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/ilya-yakover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/invision-white-slim.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/joshua-stannard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/login-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/new_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/nucleo-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/placeholder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/ryan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/soroush-karimi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/cards/CropperModal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/viedo/Comment.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/viedo/Signup.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/viedo/flower.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/viedo/login_and_createPage.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Form/UploadImg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/CropperModal.jsx" afterDir="false" />
+    <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +66,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Users\hosumlai\PycharmProjects\paper-kit-react-master\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -359,6 +180,8 @@
       <workItem from="1582932574369" duration="7135000" />
       <workItem from="1582954333188" duration="528000" />
       <workItem from="1582954982183" duration="415000" />
+      <workItem from="1584822156316" duration="801000" />
+      <workItem from="1584823033927" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -458,15 +281,27 @@
       <option name="project" value="LOCAL" />
       <updated>1582953687171</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="final version with comments">
+      <created>1584822292589</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584822292590</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/bookshelf" />
+      <path value="$PROJECT_DIR$/flask-rest-api-example" />
+      <path value="$PROJECT_DIR$/fyp_flaskAPI" />
+      <path value="$PROJECT_DIR$/todoism" />
+    </ignored-roots>
     <MESSAGE value="login success" />
     <MESSAGE value="poccess v1 for creating page" />
     <MESSAGE value="gitignore" />
@@ -478,7 +313,8 @@
     <MESSAGE value="frame of page" />
     <MESSAGE value="customize flower&#10;comment order&#10;backgroundmusic" />
     <MESSAGE value="deleted node test" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted node test" />
+    <MESSAGE value="final version with comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version with comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="373" y="185" key="#Deployment" timestamp="1582954690353">
@@ -497,10 +333,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581479046092" />
-    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2" timestamp="1584822246814">
+    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2" timestamp="1584822291140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584822246814" />
+    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584822291140" />
     <state x="184" y="92" width="1536" height="858" key="DiffContextDialog" timestamp="1581501631499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -529,14 +365,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="235" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581272542459" />
-    <state x="463" y="166" key="SettingsEditor" timestamp="1582954319380">
+    <state x="463" y="166" key="SettingsEditor" timestamp="1584823131744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582954319380" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1582953707470">
+    <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584823131744" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1584822300549">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582953707470" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584822300549" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1581501386411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
