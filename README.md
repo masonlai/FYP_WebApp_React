@@ -7,4 +7,5 @@
 5. run command: npm run dev/npm run build
 
 npm run dev ->build on loacal environment
+<br>
 npm run build -> building a web application by webpack
