@@ -182,6 +182,7 @@
       <workItem from="1584823033927" duration="313000" />
       <workItem from="1584860252111" duration="4023000" />
       <workItem from="1584881829088" duration="34000" />
+      <workItem from="1584882096765" duration="491000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -288,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584822292590</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="final version with comments">
+      <created>1584882114115</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1584882114115</updated>
+    </task>
+    <task id="LOCAL-00017" summary="final version with comments">
+      <created>1584882189395</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1584882189395</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581479046092" />
-    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2" timestamp="1584882108096">
+    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2" timestamp="1584882188344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584882108096" />
+    <state x="245" y="119" width="1073" height="808" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584882188344" />
     <state x="184" y="92" width="1536" height="858" key="DiffContextDialog" timestamp="1581501631499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -369,10 +384,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584823131744" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1584882115446">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1584882194110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584882115446" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584882194110" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1581501386411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
