@@ -1,6 +1,6 @@
-import React, {useContext, useState, useRef} from "react";
+import React, {useContext, useState, useRef, useEffect} from "react";
 import {AuthContext} from '../../views/Indexpage'
-import {Login} from '../apiManager/apiManager'
+import {Login, getPageList} from '../apiManager/apiManager'
 import SignUpModal from './SignUpModal'
 import {
     Button,
@@ -13,11 +13,11 @@ import {
     Col,
     Spinner,
     Input,
-    NavItem,
+    NavItem, Table,
     NavLink, DropdownToggle, DropdownMenu, DropdownItem,
-    UncontrolledDropdown
+    UncontrolledDropdown, ModalBody, ModalFooter
 } from "reactstrap";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, withRouter} from "react-router-dom";
 import {MobileContext} from '../Navbars/IndexNavbar'
 import getWindowWidth from "../apiManager/getWindowWidth";
 import Cookies from 'universal-cookie';
@@ -25,11 +25,13 @@ import Cookies from 'universal-cookie';
 function LoginModal(props) {
     const {toggleNavbarCollapse} = useContext(MobileContext);
     const [modal, setModal] = useState(false);
+    const [pageModal, setPageModal] = useState(false);
     const [loading, setLoading] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const {toggleAuth} = useContext(AuthContext);
+    const [pageList, setPageList] = useState([])
     const {logout} = useContext(AuthContext);
     const {height, width} = getWindowWidth();
     const childRef = useRef();
@@ -41,7 +43,31 @@ function LoginModal(props) {
         setModal(!modal);
         toggleNavbarCollapse()
     };
+    const togglePageModal = () => {
+        setPageList([])
+        getPageList((cookies.get('user')).id).then(function (value) {
+            for (var i = 0; i < value.page_id.length; i++) {
+                setPageList((prevState) => ([
+                    ...prevState, <tr>
+                        <th onClick={handleEnter} value={(value.page_id)[i]}>{(value.page_first_name)[i]}</th>
+                        <th onClick={handleEnter} value={(value.page_id)[i]}>{(value.page_last_name)[i]}</th>
+                    </tr>,
+                ]));
+            }
+        })
+        setPageModal(!pageModal);
+        toggleNavbarCollapse()
+    };
+    const handleEnter = (e) => {
+        setPageModal(!pageModal);
+        props.history.push({
+            pathname: "/Page/" + e.currentTarget.getAttribute('value'),
+        })
+        if (((location.pathname).split('/'))[1] == 'Page') {
+            window.location.reload();
+        }
 
+    };
     const location = useLocation();
     const mySubmitHandler = (data) => {
         data.preventDefault();
@@ -90,6 +116,7 @@ function LoginModal(props) {
                         <DropdownMenu>
                             <Link to="/craetePage"><DropdownItem>Create a webpage</DropdownItem></Link>
                             <DropdownItem>Edit webpages</DropdownItem>
+                            <DropdownItem onClick={togglePageModal}>Pages list</DropdownItem>
                             <DropdownItem onClick={logoutHandler}>Logout</DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
@@ -109,7 +136,7 @@ function LoginModal(props) {
                     </NavLink>
                 </NavItem>
             }
-            {/* Modal */}
+            {/* LoginModal */}
             <Modal isOpen={modal} toggle={toggleModal}>
                 <div className="modal-header card-register" style={{borderRadius: '8px 8px 0 0'}}>
                     <button
@@ -186,9 +213,28 @@ function LoginModal(props) {
                     </Container>
                 </div>
             </Modal>
+            {/*Pages list modal*/}
+            <Modal isOpen={pageModal} toggle={togglePageModal}>
+                <ModalBody>
+                    <Table>
+                        <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {pageList}
+
+                        </tbody>
+                    </Table>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="secondary" onClick={togglePageModal}>Cancel</Button>
+                </ModalFooter>
+            </Modal>
         </>
     )
 }
 
-
-export default LoginModal;
+export default withRouter(LoginModal);

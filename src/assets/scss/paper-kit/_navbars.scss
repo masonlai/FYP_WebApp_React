@@ -1,4 +1,11 @@
 @media only screen and (max-width: 575.98px) {
+    .c {
+    position: absolute;
+    margin-top: 50%;
+    min-width: 100%;
+    cursor: pointer;
+    will-change: transform, opacity;
+  }
   .form {
     background-Color: white;
     min-height: 100vh;
@@ -22,6 +29,15 @@
 }
 
 @media only screen and (min-width: 575.99px) {
+  .c {
+    position: absolute;
+    margin-top: 10vh;
+    min-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    cursor: pointer;
+    will-change: transform, opacity;
+  }
   .form {
     background-Color: white;
     min-height: 100vh;

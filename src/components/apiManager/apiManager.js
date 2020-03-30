@@ -4,7 +4,7 @@ import theme from '../../assets/img/a.jpg'
 // http://masonlai123.pythonanywhere.com
 // http://127.0.0.1:5000
 let postApi = (path) => {
-    return 'http://masonlai123.pythonanywhere.com' + path;
+    return 'http://127.0.0.1:5000' + path;
 };
 
 export const Login = async (username, password) => {
@@ -83,7 +83,7 @@ export const Signup = async (username, password, email, religion) => {
 };
 
 export const CreatePage = async (AuthData, dateOfBirth, dateOfDeath, fistName
-    , lastName, gender, nationality, placeOfBirth, imageUrl, theme, personal_theme, lifeProfile, position, backgroundMusic) => {
+    , lastName, gender, nationality, placeOfBirth, imageUrl, theme, personal_theme, lifeProfile, position, backgroundMusic, creator_id) => {
     const formdata = new FormData();
     formdata.append("Authorization", AuthData);
     formdata.append("first_name", fistName);
@@ -99,6 +99,7 @@ export const CreatePage = async (AuthData, dateOfBirth, dateOfDeath, fistName
     formdata.append("personal_theme", personal_theme);
     formdata.append("portrait_position", position);
     formdata.append("background_music", backgroundMusic);
+    formdata.append("creator_id", creator_id);
 
     const settings = {
         method: 'POST',
@@ -121,6 +122,22 @@ export const getPageIndex = async (key, page) => {
         mode: 'cors',
     };
     const path = '/GetPageIndex/' + key + '/' + page;
+    try {
+        const fetchResponse = await fetch(postApi(path), settings);
+        const data = await fetchResponse.json();
+        return data
+
+    } catch (e) {
+        return e;
+    }
+};
+
+export const getPageList = async (creator_id) => {
+    const settings = {
+        method: 'GET',
+        mode: 'cors',
+    };
+    const path = '/getList/' + creator_id ;
     try {
         const fetchResponse = await fetch(postApi(path), settings);
         const data = await fetchResponse.json();

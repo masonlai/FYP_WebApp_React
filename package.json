@@ -59,6 +59,7 @@
     "react-responsive-embed": "^2.1.0",
     "react-scroll": "^1.7.16",
     "react-sliding-side-panel": "^1.0.12",
+    "react-spring": "^8.0.27",
     "reactstrap": "^8.4.1",
     "universal-cookie": "^4.0.3"
   }

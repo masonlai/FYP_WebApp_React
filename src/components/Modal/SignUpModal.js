@@ -31,7 +31,7 @@ function SignUpModal({fromLogin = false}, ref) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [religion, setReligion] = useState('');
+    const [religion, setReligion] = useState('Christianity');
     const [error, setError] = useState('');
     const {toggleAuth} = useContext(AuthContext);
 

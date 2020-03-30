@@ -19,6 +19,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import {Login} from "../components/apiManager/apiManager";
 
 export const AuthContext = createContext();
 export const BackgroundContext = createContext();
@@ -30,7 +31,7 @@ function Indexpage() {
     //useEffect will run once when start application
     React.useEffect(() => {
         //if there are cookies, tell the app that user was logged in
-        if(cookies.get('user')){
+        if (cookies.get('user')) {
             setAuthData(true)
         }
         document.body.classList.add("index");
@@ -42,7 +43,7 @@ function Indexpage() {
     const cookies = new Cookies();
 
     function Logined(newValue) {
-        cookies.set('user', newValue, { path: '/' });
+        cookies.set('user', newValue, {path: '/'});
     }
 
     const [AuthData, setAuthData] = useState(false);
@@ -51,11 +52,19 @@ function Indexpage() {
         Logined(info)
         setAuthData(true)
     };
-    const logout = () =>{
+    const logout = () => {
         setAuthData(false)
-        cookies.remove('user', { path: '/' });
+        cookies.remove('user', {path: '/'});
     }
 
+    const refresh = () => {
+        Login((cookies.get('user')).username, (cookies.get('user')).password).then(function (value) {
+            setAuthData(false)
+            cookies.remove('user', {path: '/'});
+            Logined(value)
+            setAuthData(true)
+        })
+    }
     const [Background, setBackground] = useState({
         backgroundRepeat: 'repeat',
         backgroundImage:
@@ -65,33 +74,33 @@ function Indexpage() {
         width: '100%',
     });
     return (
-            <AuthContext.Provider value={{AuthData, toggleAuth: toggleAuth, logout: logout}}>
-                <BackgroundContext.Provider value={Background}>
-                    <Router>
-                        <IndexNavbar/>
-                        <div className="main">
-                            <Switch>
-                                <Route exact path="/index">
-                                    <IndexHeader/>
-                                </Route>
-                                <Route exact path="/PageIndex/:key/:page">
-                                    <PageIndex/>
-                                </Route>
-                                <Route path="/about">
-                                    <Page/>
-                                </Route>
-                                <Route path="/craetePage" component={Step1}/>
-                                <Route path="/createPageStep2" component={Step2}/>
-                                <Route path="/Page/:id" component={Page}/>
-                                <Route path="/Tutorial" component={Tutorial}/>
-                                <Route path="/Aboutus" component={Aboutus}/>
-                                <Route component={IndexHeader}/>
-                            </Switch>
-                            <DemoFooter/>
-                        </div>
-                    </Router>
-                </BackgroundContext.Provider>
-            </AuthContext.Provider>
+        <AuthContext.Provider value={{AuthData, toggleAuth: toggleAuth, logout: logout, refresh: refresh}}>
+            <BackgroundContext.Provider value={Background}>
+                <Router>
+                    <IndexNavbar/>
+                    <div className="main">
+                        <Switch>
+                            <Route exact path="/index">
+                                <IndexHeader/>
+                            </Route>
+                            <Route exact path="/PageIndex/:key/:page">
+                                <PageIndex/>
+                            </Route>
+                            <Route path="/about">
+                                <Page/>
+                            </Route>
+                            <Route path="/craetePage" component={Step1}/>
+                            <Route path="/createPageStep2" component={Step2}/>
+                            <Route path="/Page/:id" component={Page}/>
+                            <Route path="/Tutorial" component={Tutorial}/>
+                            <Route path="/Aboutus" component={Aboutus}/>
+                            <Route component={IndexHeader}/>
+                        </Switch>
+                        <DemoFooter/>
+                    </div>
+                </Router>
+            </BackgroundContext.Provider>
+        </AuthContext.Provider>
     );
 }
 

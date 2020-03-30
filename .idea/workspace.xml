@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="36f71b53-9d86-4bed-a688-137421d0c342" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/paper-kit/_navbars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/paper-kit/_navbars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreatePageForm/step2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreatePageForm/step2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/LoginModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/SignUpModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/aboutus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/aboutus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apiManager/apiManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apiManager/apiManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Indexpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Indexpage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +191,8 @@
       <workItem from="1584860252111" duration="4023000" />
       <workItem from="1584881829088" duration="34000" />
       <workItem from="1584882096765" duration="491000" />
+      <workItem from="1585442569452" duration="17321000" />
+      <workItem from="1585551270547" duration="16120000" />
     </task>
     <task id="LOCAL-00001" summary="login success">
       <created>1579487549544</created>
@@ -392,14 +402,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581501386411" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580471548074">
+    <state x="-39" y="557" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585559865670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580471548074" />
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1584882054948">
+    <state x="-39" y="557" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585559865670" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1585442590976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584882054948" />
+    <state x="667" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585442590976" />
     <state x="730" y="261" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1579712695319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -408,17 +418,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584823370861" />
-    <state x="234" y="115" width="1033" height="732" key="find.popup" timestamp="1582953401569">
+    <state x="887" y="173" width="1033" height="732" key="find.popup" timestamp="1585564390036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="234" y="115" width="1033" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582953401569" />
+    <state x="887" y="173" width="1033" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585564390036" />
     <state x="704" y="324" key="git4idea.merge.GitMergeDialog" timestamp="1579709519051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="704" y="324" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579709519051" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582817659871">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585446483811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582817659871" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585446483811" />
   </component>
 </project>
